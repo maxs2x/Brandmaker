@@ -1,0 +1,13 @@
+include _arrow-big/arrow-big.pug
+include _arrow-small/arrow-small.pug
+
+mixin button([variant_button, text_button])
+  - var variantButton = (variant_button) ? variant_button : 'standard';
+  - var textButton = (text_button) ? text_button : 'Button';
+
+  if variantButton == 'standard'
+    button.button=textButton
+  else if variantButton == 'arrow-big'
+    +button-arrow-big(textButton)
+  else if variantButton == 'arrow-small'
+    +button-arrow-small(textButton)

@@ -1,0 +1,38 @@
+.button-container {
+    position: relative;
+    max-width: max-content;
+}
+
+button.button_arrow-small {
+    position: relative;
+    height: 40px;
+    padding-left: 32px;
+    padding-right: 65.5px;
+    font-size: 14px;
+    letter-spacing: 0.85px;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 24px;
+        top: 19px;
+        right: 35px;
+        border-top: solid 1.8px;
+        border-color: #FFFFFF;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 3px;
+        position: absolute;
+        top: 17.5px;
+        right: 34.5px;
+        border-top: solid 1.5px;
+        border-right: solid 1.5px;
+        border-color: #FFFFFF;
+        transform: rotate(45deg);
+    }
+}

@@ -1,5 +1,7 @@
 extends ../../components/mainTemplate.pug
 
+include ../../components/button/button.pug
+
 block variables 
   -
     const keywords_and_description = {
@@ -10,17 +12,10 @@ block variables
 block title
   title Деломедика
 block content 
+  .buttons-block
+    +button(['standard', 'Получить коммерческое предложение'])
+    +button(['arrow-big', 'Рассчитать стоимость'])
+    +button(['arrow-small', 'Далее'])
 
-  header.container
-   
-  main
-    .slide-first
-    .slide-second
-    .slide-third
-    section.landing-page.container
-      
-      .promo-text
-        p Лучшие номера для вашей работы, отдыха и просто вдохновения
-  footer.container
    
     

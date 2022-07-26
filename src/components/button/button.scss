@@ -1,0 +1,25 @@
+@import '../../styles/variables.scss';
+
+@import '_arrow-big/arrow-big.scss';
+@import '_arrow-small/arrow-small.scss';
+
+.button {
+    height: 60px;
+    padding-left: 22px;
+    padding-right: 23px;
+    border: none;
+    border-radius: 6px;
+    font-family: "Roboto", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    text-align: center;
+    color: white;
+    background: #009FE3;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
