@@ -3,8 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin'),
     MiniCssExtractPlugin = require('mini-css-extract-plugin'),
     path = require("path");
 
-const pages = [
-    "navigations"
+const pages = ["pages/blocks/blocks",
+    "pages/mainPage/index"
 ];
 
 let mode = 'development';
