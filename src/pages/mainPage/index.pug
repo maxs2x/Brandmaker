@@ -1,5 +1,7 @@
 extends ../../components/mainTemplate.pug
 
+include ../../components/header/header.pug
+
 block variables 
   -
     const keywords_and_description = {
@@ -12,7 +14,7 @@ block title
 block content 
 
   header.container
-   
+    +header()
   main
     .slide-first
     .slide-second
