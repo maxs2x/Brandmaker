@@ -1,5 +1,6 @@
 include _arrow-big/arrow-big.pug
 include _arrow-small/arrow-small.pug
+include _arrow-blue/arrow-blue.pug
 
 mixin button([variant_button, text_button])
   - var variantButton = (variant_button) ? variant_button : 'standard';
@@ -11,3 +12,5 @@ mixin button([variant_button, text_button])
     +button-arrow-big(textButton)
   else if variantButton == 'arrow-small'
     +button-arrow-small(textButton)
+  else if variantButton == 'arrow-blue'
+    +button-arrow-blue(textButton)

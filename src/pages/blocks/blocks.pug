@@ -15,8 +15,12 @@ block title
 block content 
   .buttons-block
     +button(['standard', 'Получить коммерческое предложение'])
-    +button(['arrow-big', 'Рассчитать стоимость'])
-    +button(['arrow-small', 'Далее'])
+    .button-cont
+      +button(['arrow-big', 'Рассчитать стоимость'])
+    .button-cont
+      +button(['arrow-small', 'Далее'])
+    .button-cont
+      +button(['arrow-blue', 'Назад'])
     +radio-button({text: "Требуется выездная бригада"})
     +radio-button({text: "В медцентре"})
 

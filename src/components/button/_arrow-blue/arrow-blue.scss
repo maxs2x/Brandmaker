@@ -1,12 +1,13 @@
-button.button_arrow-small {
+button.button_arrow-blue {
     position: relative;
     height: 40px;
-    padding-left: 29px;
-    padding-right: 69.5px;
+    padding-left: 65.5px;
+    padding-right: 32px;
+    background-color: #ffffff;
     font-family: 'Gotham Pro';
     font-size: 14px;
-    letter-spacing: 0.7px;
-    line-height: 15px;
+    color: $text1;
+    letter-spacing: 0.4px;
 
     &::before {
         content: '';
@@ -14,9 +15,9 @@ button.button_arrow-small {
         position: absolute;
         width: 24px;
         top: 20px;
-        right: 35px;
+        left: 30px;
         border-top: solid 1.8px;
-        border-color: #FFFFFF;
+        border-color: $blue;
     }
 
     &::after {
@@ -26,10 +27,10 @@ button.button_arrow-small {
         width: 3px;
         position: absolute;
         top: 18.5px;
-        right: 35.5px;
+        left: 29px;
         border-top: solid 1.5px;
-        border-right: solid 1.5px;
-        border-color: #FFFFFF;
-        transform: rotate(45deg);
+        border-left: solid 1.5px;
+        border-color: $blue;
+        transform: rotate(-45deg);
     }
 }
