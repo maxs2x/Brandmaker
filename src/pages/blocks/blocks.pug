@@ -1,6 +1,7 @@
 extends ../../components/mainTemplate.pug
 
 include ../../components/button/button.pug
+include ../../components/radio-button/radio-button.pug
 
 block variables 
   -
@@ -16,6 +17,8 @@ block content
     +button(['standard', 'Получить коммерческое предложение'])
     +button(['arrow-big', 'Рассчитать стоимость'])
     +button(['arrow-small', 'Далее'])
+    +radio-button({text: "Требуется выездная бригада"})
+    +radio-button({text: "В медцентре"})
 
    
     

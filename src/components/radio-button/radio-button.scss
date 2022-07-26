@@ -1,0 +1,61 @@
+@import '../../styles/variables.scss';
+
+.radio-button {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  padding-left: 33px;
+  font-size: 13px;
+  height: 27px;
+  line-height: 27px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+  
+.radio-button__input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-button__checkmark {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border: 2px solid;
+  border-color: $radio-button-inactive;
+  border-radius: 50%;
+}
+  
+.radio-button__input:checked + .radio-button__checkmark {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 20px;
+  width: 20px;
+  background-color: $blue; 
+  border-color: $blue;
+  border-radius: 50%;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    height: 4px;
+    width: 4px;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+}
+  
+
+  
+
+  

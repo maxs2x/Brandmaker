@@ -1,12 +1,13 @@
 @import '../../components/mainTemplate.scss';
 @import '../../components/button/button.scss';
+@import '../../components/radio-button/radio-button.scss';
 
 .buttons-block {
     display: flex;
     flex-flow: column nowrap;
     max-width: 322px;
 
-    button {
+    button, .radio-button {
         margin: 20px 0px;
     }
 }
