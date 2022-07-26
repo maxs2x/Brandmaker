@@ -1,3 +1,6 @@
+
+@import '../styles/variables.scss';
+
 body {
-    font: 16px/1.4em "Gotham pro", Arial, sans-serif;
+    font: 16px/1.4em $mainFont;
 }
