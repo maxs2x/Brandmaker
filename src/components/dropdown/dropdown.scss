@@ -1,0 +1,81 @@
+@import '../../styles/variables.scss';
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  min-height: 2.6875rem;
+  min-width: 9.375rem;
+  background-color: white;
+  cursor: pointer;
+  font-family: $mainFont;
+  font-size: 14px;
+  font-weight: 400;
+  color: inherit;
+  letter-spacing: 0.0px;
+
+  &__arrow {
+    border: solid;
+    border-width: 0 1px 1px 0;
+    border-color: inherit;
+    display: inline-block;
+    padding: 0.1875rem;
+  }
+
+  &__arrow_down {
+    transform: rotate(45deg); 
+    margin: 0px 2px 2px 0px;
+  }
+
+  &__arrow_up {
+    transform: rotate(225deg);
+  }
+
+  &__text-placeholder {
+    display: inline-block;
+    margin: 0px 5px 0px 0px;
+    padding-left: 4px;
+    font-size: 14px;
+    letter-spacing: 0.00rem;
+    color: inherit;
+  }
+}
+
+.js-dropdown__invisible {
+  display: none;
+}
+
+.list-of-options {
+  position: absolute;  
+  width: 100%;  
+  margin-top: 0;
+  padding: 0.185rem 0.0rem 0.3125rem 0rem;
+  background-color: white;
+  outline-offset: -0.0625rem;
+  list-style: none;
+  z-index: 3;
+
+  &__item {
+    margin-bottom: 0.125rem;
+    padding-right: 0.4375rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+
+  &__title-item {
+    line-height: 2.1875rem;
+    padding-left: 0.9375rem;
+    margin: 0px;
+    font-family: $mainFont;
+    font-size: 14px;
+    color: $text;
+    letter-spacing: -0.05rem;
+
+    &:hover {
+      color: inherit;
+    }
+  }
+}
+
+

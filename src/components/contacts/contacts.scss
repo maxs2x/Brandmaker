@@ -1,0 +1,38 @@
+@import '../dropdown/dropdown.scss';
+
+.contacts {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+}
+
+.contacts__email {
+    font-family: $mainFont;
+    font-size: 14px;
+    color: $text;
+    text-decoration: none;
+}
+
+.contacts__phone {
+    margin-top: 7px;
+    font-family: "Gotham pro Medium";
+    font-size: 19px;
+    font-weight: 900;
+    letter-spacing: 0.1px;
+    color: $text1;
+    text-decoration: none;
+}
+
+.contacts__geo {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 17px;
+    font-family: $mainFont;
+    font-size: 14px;
+    color: $text;
+}
+
+.contacts__geo-dropdown {
+    border-color: $blue;
+    color: $blue;
+}

@@ -1,0 +1,10 @@
+include ../dropdown/dropdown.pug
+
+mixin contacts(options)
+  .contacts 
+    a.contacts__email(href="mailto: prof@diamed.group") prof@diamed.group 
+    a.contacts__phone(href="phone: +7 (495) 281 53 33") +7 (495) 281 53 33
+    .contacts__geo
+      .contacts__geo-text Ваш город:
+      .contacts__geo-dropdown
+        +dropdown({text_placeholder: "Королёв", content: ["Москва", "Казань", "Санкт-Петербург", "Находка"]})

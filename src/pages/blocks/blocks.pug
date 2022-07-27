@@ -3,6 +3,8 @@ extends ../../components/mainTemplate.pug
 include ../../components/button/button.pug
 include ../../components/radio-button/radio-button.pug
 include ../../components/text-field/text-field.pug
+include ../../components/contacts/contacts.pug
+include ../../components/dropdown/dropdown.pug
 
 block variables 
   -
@@ -26,6 +28,7 @@ block content
     +radio-button({text: "В медцентре"})
     +text-field({id: 'phone', type: 'phone'})
     +text-field({id: 'number', type: 'number', placeholder: "Введите число"})
-
+    +contacts()
+    +dropdown({text_placeholder: "Услуги", content: ["Вакцинация", "Тендерный отдел"]})
    
     

@@ -2,11 +2,14 @@
 @import '../../components/button/button.scss';
 @import '../../components/radio-button/radio-button.scss';
 @import '../../components/text-field/text-field.scss';
+@import '../../components/contacts/contacts.scss';
+@import '../../components/dropdown/dropdown.scss';
 
 .buttons-block {
     display: flex;
     flex-flow: column nowrap;
     max-width: 322px;
+    justify-content: space-between;
 
     button, .radio-button {
         margin: 20px 0px;
