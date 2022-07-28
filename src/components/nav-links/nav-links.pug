@@ -1,0 +1,24 @@
+include ../dropdown/dropdown.pug
+
+mixin nav-link(options)
+  -
+    options = options || {};
+    href = options.href || "not_filled";
+    text = options.text || "navigation-link";
+    linkClass = (options.active) ? "navigation-link navigation-link_active" : "navigation-link";
+    dropdownItems = (options.dropdownNavLink) ? options.dropdownNavLink : false;
+
+  if dropdownItems
+    .navigation-link
+      +dropdown(options)
+  else
+    a(class=linkClass href=href)=text
+
+
+mixin nav-links(links)
+  -
+    links = links || [{href: "#podbor", text: "Подбор профосмотра"}];
+
+  nav.nav-links 
+    each val in links 
+      +nav-link(val)

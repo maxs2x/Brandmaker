@@ -1,3 +1,31 @@
-mixin header()
-    .header
-        a.header__logo(href="landing-page.html")  Link test
+mixin header(options)
+  -
+    options = options || {};
+    defaultMenu = [
+      {text: "О нас", href: "/about", active: true},
+      {text: "Услуги", href: "not_filled", dropdownItems: [
+        {text: "Подбор жлья", href: "not_filled"},
+        {text: "Размщение", href: "not_filled"},
+      ]},
+      {text: "Вакансии", href: "not_filled"},
+      {text: "Новости", href: "/news"},
+      {text: "Соглашения", href: "not_filled", dropdownItems: [
+        {text: "Для арендодателя", href: "not_filled"},
+        {text: "Для арендатора", href: "not_filled"},
+      ]},
+    ]
+    menu = options.menu || defaultMenu;
+
+  .header
+    a.header__logo(href="landing-page.html") 
+      .header__image-logo 
+        img( alt="излбражение логотипа")
+      .header__text-logo 
+        img( alt="название компании TOXIN")
+    nav.header__navigation
+      .header__navigation-link
+       
+          
+      .header__login-block
+
+    

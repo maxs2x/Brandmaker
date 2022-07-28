@@ -1,5 +1,7 @@
 @import '../../styles/variables.scss';
 
+@import './_fixed-width/fixed-width.scss';
+
 .dropdown {
   position: relative;
   display: inline-block;

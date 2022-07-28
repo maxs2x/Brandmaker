@@ -1,0 +1,14 @@
+
+.nav-links {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.navigation-link {
+    display: inline-block;
+    font-family: $mainFont;
+    font-size: 14px;
+    color: $text1;
+    text-decoration: none;
+}

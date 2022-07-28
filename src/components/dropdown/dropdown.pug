@@ -1,18 +1,31 @@
+include _fixed-width/fixed-width.pug
+
 mixin dropdown(options)
   - var options = options || {text_placeholder : "Dropdown", content : ["спальни", "кровати", "ванные комнаты"]};
   - var textPlaceholder = (options.text_placeholder) ? options.text_placeholder : "Dropdown";
+  - var dropdownNavLink = (options.dropdownNavLink) ? options.dropdownNavLink : false;
   - var titleRow = (options.content) ? options.content : ["спальни", "кровати", "ванные комнаты"];
 
-  .dropdown.js-dropdown  
+  if dropdownNavLink 
+    - var dropdownClass = "dropdown dropdown_fixed-width js-dropdown"
+  else 
+    - var dropdownClass = "dropdown js-dropdown"
+
+  div(class=dropdownClass) 
     .dropdown__button.js-dropdown__button.border-for-dropdown_default
       p(class="dropdown__text-placeholder js-dropdown__text-placeholder")=textPlaceholder
       .dropdown__arrow.dropdown__arrow_down.js-dropdown__arrow_down
       .dropdown__arrow.js-dropdown__arrow_up.dropdown__arrow_up.js-dropdown__invisible
     .dropdown__hidden-block.js-dropdown__hidden-block.js-dropdown__invisible
-      ul.list-of-options
-        each val in titleRow
-          li.list-of-options__item.js-list-of-options__item
-            p.list-of-options__title-item= val 
+      if dropdownNavLink 
+        ul.list-of-options.list-of-options_fixed-width 
+          each val in options.dropdownItems
+            +fixed-width(val)
+      else
+        ul.list-of-options
+          each val in titleRow
+            li.list-of-options__item.js-list-of-options__item
+              p.list-of-options__title-item= val 
          
        
       

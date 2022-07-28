@@ -1,0 +1,8 @@
+mixin fixed-width(options)
+  -
+    options = options || {};
+    href = options.href || "not_filled";
+    text = options.text || "navigation-link";
+  
+  li.list-of-options__item.list-of-options__item_fixed-width.js-list-of-options__item
+    a(class="list-of-options__title-item list-of-options__title-item_fixed-width" href=href)= text
