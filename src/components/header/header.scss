@@ -1,1 +1,62 @@
 @import '../../styles/variables.scss';
+
+@import '../nav-links/nav-links.scss';
+@import '../dropdown/dropdown.scss';
+
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header__navigation {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+
+.header__logo {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: min-content;
+    text-decoration: none;
+}
+
+.header__image-logo {
+
+}
+
+.header__divider {
+    display: block;
+    content: "";
+    height: 31px;
+    border-left: solid 1px;
+    border-color: $blue;
+}
+
+.header__text-logo {
+    width: 200px;
+    font-family: 'Akshar', $mainFont, Arial, sans-serif;
+    font-size: 14px;
+    color: $blue;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header__nav-links {
+    box-sizing: border-box;
+    padding: 9px 10px 0px 14px;
+    max-width: 827px;
+    width: 100%;
+    
+}
+
+.header__contacts {
+    display: flex;
+    align-content: center;
+    min-width: 185px;
+    max-width: 196px;
+    width: 100%;
+}

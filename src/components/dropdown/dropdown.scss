@@ -5,16 +5,12 @@
 .dropdown {
   position: relative;
   display: inline-block;
-  width: 100%;
-  min-height: 2.6875rem;
-  min-width: 9.375rem;
   background-color: white;
   cursor: pointer;
   font-family: $mainFont;
   font-size: 14px;
   font-weight: 400;
   color: inherit;
-  letter-spacing: 0.0px;
 
   &__arrow {
     border: solid;
@@ -35,8 +31,8 @@
 
   &__text-placeholder {
     display: inline-block;
-    margin: 0px 5px 0px 0px;
-    padding-left: 4px;
+    margin: 0px 7px 0px 0px;
+    padding-left: 0px;
     font-size: 14px;
     letter-spacing: 0.00rem;
     color: inherit;
@@ -48,8 +44,7 @@
 }
 
 .list-of-options {
-  position: absolute;  
-  width: 100%;  
+  position: absolute; 
   margin-top: 0;
   padding: 0.185rem 0.0rem 0.3125rem 0rem;
   background-color: white;

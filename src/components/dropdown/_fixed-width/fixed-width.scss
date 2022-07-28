@@ -7,3 +7,11 @@
 .list-of-options.list-of-options_fixed-width {
     width: 580px;
 }
+
+.list-of-options__title-item.list-of-options__title-item_fixed-width {
+    text-decoration: none;
+
+    &:hover {
+        color: $blue;
+    }
+}

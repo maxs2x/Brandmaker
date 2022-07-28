@@ -1,1 +1,36 @@
-@import '../../components/mainTemplate.scss'
+@import '../../components/mainTemplate.scss';
+
+@import '../../components/header/header.scss';
+@import '../../components/button/button.scss';
+@import '../../components/radio-button/radio-button.scss';
+@import '../../components/text-field/text-field.scss';
+@import '../../components/contacts/contacts.scss';
+@import '../../components/dropdown/dropdown.scss';
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header__logo {
+    margin-top: 7px;
+    margin-left: 8px;
+}
+
+.header__image-logo {
+    margin-top: 2px;
+}
+
+.header__divider {
+    margin: 4px 24px 0px 20px;
+}
+
+.header__text-logo {
+    & p {
+        padding-top: 13px;
+        margin: 0px;
+        line-height: 22px;
+        letter-spacing: -0.4px;
+    }
+}

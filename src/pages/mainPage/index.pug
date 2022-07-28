@@ -1,6 +1,11 @@
 extends ../../components/mainTemplate.pug
 
 include ../../components/header/header.pug
+include ../../components/button/button.pug
+include ../../components/radio-button/radio-button.pug
+include ../../components/text-field/text-field.pug
+include ../../components/contacts/contacts.pug
+include ../../components/dropdown/dropdown.pug
 
 block variables 
   -
@@ -12,9 +17,33 @@ block variables
 block title
   title Деломедика
 block content 
-
+  -
+    const navigation = [
+      {href: "#podbor", text: "Подбор профосмотра"}, 
+      {href: "#Services", 
+        text_placeholder : "Услуги",
+        dropdownNavLink: true,
+        dropdownItems: [
+          {href: "noLink", text: "Предварительные и периодические медицинские осмотры (профосмотры)"},
+          {href: "noLink", text: "Личные медицинские книжки (ЛМК)"},
+          {href: "noLink", text: "Психиатрическое освидетельствование"},
+          {href: "noLink", text: "Предрейсовые/послерейсовые медицинские осмотры"},
+          {href: "noLink", text: "Организация здравпункта на предприятии"},
+          {href: "noLink", text: "Диспансеризация"},
+          {href: "noLink", text: "Вакцинация"},
+          {href: "noLink", text: "Помощь в организации аттестации рабочих мест (СОУТ)"},
+          {href: "noLink", text: "Тендерный отдел"} 
+        ]
+      },
+      {href: "/about", text: "О медцентре"},
+      {href: "/gallery", text: "Галерея"},
+      {href: "/thanks", text: "Благодарности"},
+      {href: "/license", text: "Лицензии"},
+      {href: "/contacts", text: " Контакты"},
+    ];
+    const header = {menu: navigation};
   header.container
-    +header()
+    +header(header)
   main
     .slide-first
     .slide-second

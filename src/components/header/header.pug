@@ -1,3 +1,6 @@
+include ../nav-links/nav-links.pug
+include ../contacts/contacts.pug
+
 mixin header(options)
   -
     options = options || {};
@@ -16,16 +19,20 @@ mixin header(options)
     ]
     menu = options.menu || defaultMenu;
 
-  .header
-    a.header__logo(href="landing-page.html") 
-      .header__image-logo 
-        img( alt="излбражение логотипа")
-      .header__text-logo 
-        img( alt="название компании TOXIN")
-    nav.header__navigation
-      .header__navigation-link
+  header.header
+    .header__navigation 
+      a.header__logo(href="index.html") 
+        .header__image-logo 
+          img(src=require("../../images/Logo.jpg"))
+        .header__divider
+        .header__text-logo 
+          p Медицинские профосмотры в Москве и области  
+      nav.header__nav-links
+        +nav-links(menu)
+    .header__contacts
+      +contacts()
+  
        
-          
-      .header__login-block
+   
 
     

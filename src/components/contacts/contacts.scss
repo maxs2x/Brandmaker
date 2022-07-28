@@ -3,7 +3,7 @@
 .contacts {
     display: flex;
     flex-flow: column;
-    justify-content: flex-start;
+    justify-content: flex-end;
 }
 
 .contacts__email {
@@ -26,13 +26,14 @@
 .contacts__geo {
     display: flex;
     flex-flow: row nowrap;
-    margin-top: 17px;
+    margin-top: 16px;
     font-family: $mainFont;
     font-size: 14px;
     color: $text;
 }
 
 .contacts__geo-dropdown {
+    margin-left: 4px;
     border-color: $blue;
     color: $blue;
 }
