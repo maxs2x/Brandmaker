@@ -1,10 +1,17 @@
 include ../dropdown/dropdown.pug
 
 mixin contacts(options)
+  -
+    options = options || {};
+    email = options.email || "email@mail.com";
+    phone = options.phone || "+7 999 000 90 90";
+    defaultDropdown = {text_placeholder: "Королёв", content: ["Москва", "Казань", "Санкт-Петербург", "Находка"]};
+    dropdown = options.dropdown || defaultDropdown;
+
   .contacts 
-    a.contacts__email(href="mailto: prof@diamed.group") prof@diamed.group 
-    a.contacts__phone(href="phone: +7 (495) 281 53 33") +7 (495) 281 53 33
+    a.contacts__email(href="mailto: " + email)=email
+    a.contacts__phone(href="phone: " + phone)=phone
     .contacts__geo
       .contacts__geo-text Ваш город:
       .contacts__geo-dropdown
-        +dropdown({text_placeholder: "Королёв", content: ["Москва", "Казань", "Санкт-Петербург", "Находка"]})
+        +dropdown(dropdown)

@@ -41,7 +41,14 @@ block content
       {href: "/license", text: "Лицензии"},
       {href: "/contacts", text: " Контакты"},
     ];
-    const header = {menu: navigation};
+    const defContacts = {
+      text_placeholder: "Королёв",
+      content: ["Москва", "Казань", "Санкт-Петербург", "Находка"],
+      email: "prof@diamed.group",
+      phone: "+7 (495) 281 53 33",
+    };
+    const header = {menu: navigation, contacts: defContacts};
+
   header.container
     +header(header)
   main

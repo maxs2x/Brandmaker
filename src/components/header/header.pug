@@ -18,6 +18,7 @@ mixin header(options)
       ]},
     ]
     menu = options.menu || defaultMenu;
+    contacts = options.contacts || {};
 
   header.header
     .header__navigation 
@@ -30,7 +31,7 @@ mixin header(options)
       nav.header__nav-links
         +nav-links(menu)
     .header__contacts
-      +contacts()
+      +contacts(contacts)
   
        
    
