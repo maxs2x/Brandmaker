@@ -34,3 +34,19 @@
         letter-spacing: -0.4px;
     }
 }
+
+.first-screen {
+    margin-top: 20px;
+    background: linear-gradient(105.08deg, #E1E9EF 22.02%, #C8D4DF 93.22%);
+}
+
+.first-screen__content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    background-image:
+      url(../../images/girl2.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 800px;
+}
