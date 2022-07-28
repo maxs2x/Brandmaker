@@ -28,6 +28,7 @@ block content
           {href: "noLink", text: "Личные медицинские книжки (ЛМК)"},
           {href: "noLink", text: "Психиатрическое освидетельствование"},
           {href: "noLink", text: "Предрейсовые/послерейсовые медицинские осмотры"},
+          {href: "noLink", text: "Предрейсовые/послерейсовые медицинские осмотры"},
           {href: "noLink", text: "Организация здравпункта на предприятии"},
           {href: "noLink", text: "Диспансеризация"},
           {href: "noLink", text: "Вакцинация"},
@@ -41,13 +42,24 @@ block content
       {href: "/license", text: "Лицензии"},
       {href: "/contacts", text: " Контакты"},
     ];
-    const defContacts = {
+    const headerContacts = {
       text_placeholder: "Королёв",
       content: ["Москва", "Казань", "Санкт-Петербург", "Находка"],
       email: "prof@diamed.group",
       phone: "+7 (495) 281 53 33",
     };
-    const header = {menu: navigation, contacts: defContacts};
+
+    const burgerContacts = {
+      forBurgerMenu: true,
+      text_placeholder: "Королёв",
+      content: ["Москва", "Казань", "Санкт-Петербург", "Находка"],
+      email: "prof@diamed.group",
+    };
+    const header = {
+      menu: navigation,
+      contacts: headerContacts,
+      mobileContacts: burgerContacts,
+    };
 
   header.container
     +header(header)

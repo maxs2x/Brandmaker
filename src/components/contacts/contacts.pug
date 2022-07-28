@@ -1,17 +1,24 @@
+include _burger-menu/burger-menu.pug
+
 include ../dropdown/dropdown.pug
 
 mixin contacts(options)
   -
     options = options || {};
     email = options.email || "email@mail.com";
-    phone = options.phone || "+7 999 000 90 90";
+    phone = options.phone || false;
     defaultDropdown = {text_placeholder: "Королёв", content: ["Москва", "Казань", "Санкт-Петербург", "Находка"]};
     dropdown = options.dropdown || defaultDropdown;
+    forBurgerMenu = options.forBurgerMenu;
 
-  .contacts 
-    a.contacts__email(href="mailto: " + email)=email
-    a.contacts__phone(href="phone: " + phone)=phone
-    .contacts__geo
-      .contacts__geo-text Ваш город:
-      .contacts__geo-dropdown
-        +dropdown(dropdown)
+  if forBurgerMenu
+    +contacts_burger-menu(options)
+  else
+    .contacts 
+      a.contacts__email(href="mailto: " + email)=email
+      if phone
+        a.contacts__phone(href="phone: " + phone)=phone
+      .contacts__geo
+        .contacts__geo-text Ваш город:
+        .contacts__geo-dropdown
+          +dropdown(dropdown)

@@ -1,3 +1,6 @@
+include ../contacts/contacts.pug
+include ../nav-links/nav-links.pug
+
 mixin burger-menu(options)
   -
     options = options || {};
@@ -8,7 +11,8 @@ mixin burger-menu(options)
       {text: "Новости", href: "/news"},
       {text: "Соглашения", href: "not_filled"},
     ]
-    menu = options.menu || defaultMenu;
+    menu = options.links || defaultMenu;
+    contact = options.contactMini || {};
 
   .burger-menu
     input#burger-menu__button.burger-menu__checkbox(type="checkbox")
@@ -17,5 +21,8 @@ mixin burger-menu(options)
       span.burger-menu__button-line
       span.burger-menu__button-line
     nav.burger-menu__navigation
+      .burger-menu__contact
+        +contacts(contact)
       each item in menu 
-        a.burger-menu__navigation-link(href=item.href)= item.text
+        .burger-menu__link
+          +nav-link(item)

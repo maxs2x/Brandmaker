@@ -1,11 +1,11 @@
 .dropdown.dropdown_fixed-width {
-    width: auto;
+    width: 100%;
     min-width: auto;
     min-height: auto;
 }
 
 .list-of-options.list-of-options_fixed-width {
-    width: 580px;
+    width: 500px;
 }
 
 .list-of-options__title-item.list-of-options__title-item_fixed-width {
@@ -13,5 +13,19 @@
 
     &:hover {
         color: $blue;
+    }
+}
+
+@media (max-width: 1000px) {
+    
+    .list-of-options.list-of-options_fixed-width {
+        width: 95%;
+        margin-bottom: 0px;
+        padding-top: 5.5px;
+        padding-bottom: 1px;
+    }
+    
+    .list-of-options__title-item.list-of-options__title-item_fixed-width {
+        color: $text2;
     }
 }

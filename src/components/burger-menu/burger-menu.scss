@@ -1,3 +1,5 @@
+@import '../dropdown/dropdown.scss';
+
 .burger-menu {
   position: relative;
   display: flex;
@@ -26,7 +28,8 @@
 
     &:checked ~ .burger-menu__navigation {
         display: flex;
-        right: -10px;
+        position: fixed;
+        left: 0px;
         z-index: 2;
     }
 
@@ -56,32 +59,30 @@
   }
 
   &__navigation {
-    position: absolute;
+    box-sizing: border-box;
     top: 47px;
-    right: -200rem;
-    max-width: 999px;
-    min-width: 360px;
+    max-width: 100%;
+    min-width: 362px;
     width: 100%;
     background: white;
     display: none;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
-    padding: 3rem 3rem 3rem;
+    align-items: flex-start;
+    padding: 42px 20px 0px 21px;
     transition: right .4s;
     border-bottom-left-radius: 5rem;
   }
 
-  &__navigation-link {
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 1.2rem;
-    color: black;
-    text-transform: uppercase;
-    text-decoration: none;
-    margin-bottom: 1rem;
-    padding: 0.2rem 0.5rem;
-    transition: all .2s linear;
+  &__contact {
+    margin-bottom: 28px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  &__link {
+    margin: 8px 0px 8.5px 1px;
+    width: 100%;
   }
 }
 

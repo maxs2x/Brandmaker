@@ -53,21 +53,19 @@
   z-index: 3;
 
   &__item {
-    margin-bottom: 0.125rem;
-    padding-right: 0.4375rem;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    margin-top: 12.5px;
   }
 
   &__title-item {
-    line-height: 2.1875rem;
-    padding-left: 0.9375rem;
+    line-height: 20px;
+    padding-left: 18px;
     margin: 0px;
     font-family: $mainFont;
     font-size: 14px;
     color: $text;
-    letter-spacing: -0.05rem;
 
     &:hover {
       color: inherit;
@@ -75,4 +73,10 @@
   }
 }
 
+@media (max-width: 1000px) {
+    
+  .list-of-options {
+    position: static;
+  }
+}
 

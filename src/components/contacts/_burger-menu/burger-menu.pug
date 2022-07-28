@@ -1,0 +1,17 @@
+mixin contacts_burger-menu(options)
+  -
+    options = options || {};
+    email = options.email || "email@mail.com";
+    phone = options.phone || false;
+    defaultDropdown = {text_placeholder: "Королёв", content: ["Москва", "Казань", "Санкт-Петербург", "Находка"]};
+    dropdown = options.dropdown || defaultDropdown;
+    forBurgerMenu = options.forBurgerMenu;
+
+  .contacts.contacts_burger-menu 
+    a.contacts__email.contacts__email_burger-menu(href="mailto: " + email)=email
+    if phone
+      a.contacts__phone.contacts__phone_burger-menu(href="phone: " + phone)=phone
+    .contacts__geo.contacts__geo_burger-menu
+      .contacts__geo-text.contacts__geo-text_burger-menu Ваш город:
+      .contacts__geo-dropdown.contacts__geo-dropdown_burger-menu
+        +dropdown(dropdown)

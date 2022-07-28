@@ -5,11 +5,11 @@ mixin nav-link(options)
     options = options || {};
     href = options.href || "not_filled";
     text = options.text || "navigation-link";
-    linkClass = (options.active) ? "navigation-link navigation-link_active" : "navigation-link";
+    linkClass = (options.burger) ? "navigation-link navigation-link_burger" : "navigation-link";
     dropdownItems = (options.dropdownNavLink) ? options.dropdownNavLink : false;
 
   if dropdownItems
-    .navigation-link
+    div(class=linkClass)
       +dropdown(options)
   else
     a(class=linkClass href=href)=text
