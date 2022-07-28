@@ -1,0 +1,21 @@
+mixin burger-menu(options)
+  -
+    options = options || {};
+    defaultMenu = [
+      {text: "О нас", href: "/about"},
+      {text: "Услуги", href: "not_filled"},
+      {text: "Вакансии", href: "not_filled"},
+      {text: "Новости", href: "/news"},
+      {text: "Соглашения", href: "not_filled"},
+    ]
+    menu = options.menu || defaultMenu;
+
+  .burger-menu
+    input#burger-menu__button.burger-menu__checkbox(type="checkbox")
+    label.burger-menu__button(for="burger-menu__button")
+      span.burger-menu__button-line
+      span.burger-menu__button-line
+      span.burger-menu__button-line
+    nav.burger-menu__navigation
+      each item in menu 
+        a.burger-menu__navigation-link(href=item.href)= item.text

@@ -1,0 +1,87 @@
+.burger-menu {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  
+  &__button {
+    width: 25px;
+    height: 18px;
+  }
+
+  &__button-line {
+    display: block;
+    width: 23px;
+    height: 2px;
+    background: $blue;
+    margin: 4px 1px;
+    position: relative;
+    transition: all .2s;
+  }
+
+  &__checkbox {
+    display: none;
+
+    &:checked ~ .burger-menu__navigation {
+        display: flex;
+        right: -10px;
+        z-index: 2;
+    }
+
+    &:checked ~ .burger-menu__button :nth-child(1) {
+        height: 1px;
+        width: 19px;
+        top: -3px;
+        right: -8px;
+        transform: rotate(45deg);
+        background-color: $text;
+        z-index: 3;
+    }
+
+    &:checked ~ .burger-menu__button :nth-child(2) {
+        opacity: 0;
+    }
+
+    &:checked ~ .burger-menu__button :nth-child(3) {
+        height: 1px;
+        width: 19px;
+        top: -14px;
+        right: -8px;
+        transform: rotate(-45deg);
+        background-color: $text;
+        z-index: 3;
+    }
+  }
+
+  &__navigation {
+    position: absolute;
+    top: 47px;
+    right: -200rem;
+    max-width: 999px;
+    min-width: 360px;
+    width: 100%;
+    background: white;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 3rem 3rem 3rem;
+    transition: right .4s;
+    border-bottom-left-radius: 5rem;
+  }
+
+  &__navigation-link {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.2rem;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    padding: 0.2rem 0.5rem;
+    transition: all .2s linear;
+  }
+}
+

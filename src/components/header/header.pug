@@ -1,5 +1,6 @@
 include ../nav-links/nav-links.pug
 include ../contacts/contacts.pug
+include ../burger-menu/burger-menu.pug
 
 mixin header(options)
   -
@@ -32,7 +33,13 @@ mixin header(options)
         +nav-links(menu)
     .header__contacts
       +contacts(contacts)
-  
+    .header__mobile-logo
+      a.header__mobile-logo-link(href="index.html") 
+        img.header__image-mobile-logo(src=require("../../images/mobileLogo.jpg"))
+    p.header__phone +7 (495) 281 53 33
+    .header__burger-menu
+      +burger-menu()
+    
        
    
 

@@ -2,6 +2,7 @@
 
 @import '../nav-links/nav-links.scss';
 @import '../dropdown/dropdown.scss';
+@import '../burger-menu/burger-menu.scss';
 
 header {
     display: flex;
@@ -59,4 +60,60 @@ header {
     min-width: 185px;
     max-width: 196px;
     width: 100%;
+}
+
+.header__mobile-logo, .header__phone, .header__burger-menu {
+    display: none;
+}
+
+.header__mobile-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.header__mobile-logo-link {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.header__image-mobile-logo {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+
+p.header__phone {
+    padding-right: 3px;
+    font-family: "Gotham pro Medium";
+    color: $text1;
+    letter-spacing: -0.4px;
+}
+
+@media (max-width: 1000px) {
+    .header {
+        margin-left: 2px;
+        margin-top: 3px;
+        justify-content: space-around;
+    }
+
+    .header__navigation, .header__contacts {
+        display: none;
+    }
+    
+    .header__mobile-logo, .header__phone {
+        display: flex;
+    }
+
+    .header__burger-menu {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+
 }
