@@ -38,17 +38,43 @@
 }
 
 .first-screen {
-    margin-top: 20px;
+    margin-top: 21px;
     background: linear-gradient(105.08deg, #E1E9EF 22.02%, #C8D4DF 93.22%);
 }
 
 .first-screen__content {
+    height: 851px;
+    position: relative;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    background-image:
-      url(../../images/girl2.svg);
     background-position: center;
     background-repeat: no-repeat;
-    height: 800px;
+}
+
+.first-screen__image {
+    z-index: 6;
+    position: absolute;
+    margin: 0px 320px 0px 0px;
+    width: 683px;
+    height: 748px;
+    bottom: 10px;
+    right: 0px;
+    background-image:
+      url(../../images/girl2.svg);
+}
+
+.first-screen__offer {
+    display: flex;
+    align-items: center;
+    width: 425px;
+    padding-left: 9px;
+    padding-bottom: 3px;
+    z-index: 7;
+}
+
+.first-screen__feedback-form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
 }
