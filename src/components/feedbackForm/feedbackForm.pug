@@ -1,0 +1,18 @@
+include ../text-field/text-field.pug
+include ../button/button.pug
+
+mixin feedbackForm(options)
+  svg
+    clipPath(id="shield" clipPathUnits="userSpaceOnUse")
+      path(d="M0 3.99999C0 1.79086 1.79086 0 4 0H185H366C368.209 0 370 1.79086 370 4V326.419C370 368.397 343.782 405.907 304.359 420.331L186.374 463.497C185.487 463.822 184.513 463.822 183.626 463.497L65.6408 420.331C26.218 405.907 0 368.397 0 326.419V3.99999Z" fill="white")
+  form.feedbackForm 
+    p.feedbackForm__offer-text Оставьте заявку, и мы предоставим полный план профосмотра 
+      br
+      | с расчетом итоговой стоимости, подходящий именно вашей организации
+    .feedbackForm__text-field 
+      +text-field({id: 'phone', type: 'phone'})
+    .feedbackForm__button 
+      +button(['standard', 'Получить коммерческое предложение'])
+    .feedbackForm__offer-agreement 
+      .feedbackForm__text-offer-agreement Передавая информацию сайту, вы принимаете условия
+      a.feedbackForm__link-offer-agreement(href="noLink") Политики защиты персональной информации

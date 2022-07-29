@@ -6,6 +6,8 @@ include ../../components/radio-button/radio-button.pug
 include ../../components/text-field/text-field.pug
 include ../../components/contacts/contacts.pug
 include ../../components/dropdown/dropdown.pug
+include ../../components/offer/offer.pug
+include ../../components/feedbackForm/feedbackForm.pug
 
 block variables 
   -
@@ -61,18 +63,37 @@ block content
       mobileContacts: burgerContacts,
     };
 
+    const benefits1 = {
+      alt: "Полный цикл обслуживания",
+      title: "Сделаем за вас все:",
+      description: "от подбора типа профосмотра до выдачи всех документов",
+      image: "benefit1.svg",
+      modifier: "cycle",
+    };
+
+    const benefits2 = {
+      alt: "Полный цикл обслуживания",
+      title: "Работаем строго по 302н",
+      description: "Приказу Минздравсоцразвития",
+      image: "benefit2.svg",
+      modifier: "list",
+    };
+
+    const benefits3 = {
+      alt: "Полный цикл обслуживания",
+      title: "Результаты профосмотра ",
+      description: "всего за 7 дней",
+      image: "benefit3.svg",
+    };
+
+    const offer = {benefits: [benefits1, benefits2, benefits3]};
+
   header.container
     +header(header)
   main
     section.first-screen
-      .first-screen__content
+      .first-screen__content.container
         .first-screen__offer 
-          p.first-screen__large-offer-text  Проведение профосмотров от 600 руб./чел. 
-          p.first-screen__offer-text с выездом в вашу организацию
-          .first-screen__benefits
-          a.first-screen__link(href="#second-screen") Подобрать профосмотр
-        .feedback-form
-          p Оставьте заявку, и мы предоставим полный план профосмотра с расчетом итоговой стоимости, подходящий именно вашей организации
-
-   
-    
+          +offer(offer)
+        .first-screen__feedback-form
+          +feedbackForm()    

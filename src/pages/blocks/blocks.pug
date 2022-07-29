@@ -6,6 +6,7 @@ include ../../components/radio-button/radio-button.pug
 include ../../components/text-field/text-field.pug
 include ../../components/contacts/contacts.pug
 include ../../components/dropdown/dropdown.pug
+include ../../components/feedbackForm/feedbackForm.pug
 
 block variables 
   -
@@ -57,5 +58,6 @@ block content
     +text-field({id: 'number', type: 'number', placeholder: "Введите число"})
     +contacts()
     +dropdown({text_placeholder: "Услуги", content: ["Вакцинация", "Тендерный отдел"]})
+    +feedbackForm()
    
     
