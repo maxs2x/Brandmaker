@@ -3,6 +3,10 @@
 @import './_phone/phone.scss';
 @import './_number/number.scss';
 
+.container-text-field input {
+  text-indent: 25%;
+}
+
 .text-field {
   position:relative;
   box-sizing: border-box;
