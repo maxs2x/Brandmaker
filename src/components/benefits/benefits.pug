@@ -1,0 +1,23 @@
+mixin benefits(options)
+  - var alt = (options.alt) ? options.alt : "icon";
+  - var title = (options.title) ? options.title : "Default title";
+  - var description = (options.description) ? options.description : "Default description";
+  - var modifier = (options.modifier) ? options.modifier : "";
+  - var classMainBlock = "benefit";
+  - var classTextBlock = "benefit__text";
+
+
+  - if (modifier === "cycle") {
+  -   classMainBlock = "benefit benefit_cycle";
+  -   classTextBlock = "benefit__text benefit__text_cycle";
+  - };
+  - if (modifier === "list") {
+  -   classMainBlock = "benefit benefit_list";
+  -   classTextBlock = "benefit__text benefit__text_list";
+  - };
+
+  div(class=classMainBlock)
+    img.benefit__image(src=require("../../images/" + options.image), alt=alt)
+    div(class=classTextBlock)
+      p.benefit__heading= title 
+      p.benefit__description= description

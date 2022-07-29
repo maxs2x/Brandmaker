@@ -1,0 +1,36 @@
+@import '../../styles/variables.scss';
+
+@import './_cycle/cycle.scss';
+@import './_list/list.scss';
+
+.benefit {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 335px;
+
+  &__image {
+    object-fit: contain;
+  }
+
+  &__text {
+    margin-left: 18px;
+    margin-top: 0px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+  }
+
+  &__heading {
+    margin: 0px 0px 0px 0px;
+    font-family: $mainFont;
+    color: $text1;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &__description {
+    margin: 0px 0px 3px 0px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
