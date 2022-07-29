@@ -1,0 +1,17 @@
+include ../benefits/benefits.pug
+
+mixin offer(options)
+  - var options = options || {};
+  - var benefits = options.benefits;
+
+  .offer
+    p.offer__heading  Проведение профосмотров от 600 руб./чел.
+    p.offer__offer-text с выездом в вашу организацию
+    .offer__benefits
+      .offer__container-item-one
+          +benefits(benefits[0])
+      .offer__container-item-two
+          +benefits(benefits[1])
+      .offer__container-item-three
+          +benefits(benefits[2])        
+    a.offer__link(href="#second-screen") Подобрать профосмотр
