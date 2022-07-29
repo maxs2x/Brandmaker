@@ -24,3 +24,12 @@
         opacity: 0.5;
     }
 }
+
+@media (max-width: 850px) {
+    .button {
+        height: 56px;
+        padding: 0px 30px 0px 30px;
+        line-height: 18px;
+        letter-spacing: -0.3px;
+    }
+}

@@ -14,10 +14,6 @@
         letter-spacing: 0.15px;
     }
 
-    &__large-offer-text {
-
-    }
-
     &__offer-text {
         margin-top: 3px;
         margin-bottom: 0px;
@@ -58,5 +54,62 @@
         font-size: 14px;
         color: $blue;
         text-underline-offset: 1px;
+    }
+
+    &__modal-view {
+        display: none;
+    }
+}
+
+@media (max-width: 850px) {
+    .offer {
+        padding-top: 40px;
+
+        &__heading {
+            margin: 0px 0px 0px 14px;
+            font-size: 21px;
+            line-height: 28px;
+            color: $text1;
+            letter-spacing: 0.1px;
+        }
+    
+        &__offer-text {
+            margin-top: 1px;
+            margin-left: 14px;
+            font-family: "Gotham pro Medium";
+            font-size: 21px;
+            line-height: 28px;
+            letter-spacing: 0.15px;
+        }
+    
+        &__benefits {
+            height: 196px;
+        }
+    
+        &__container-item-one {
+            margin-top: 4px;
+            margin-left: 2px;
+        }
+    
+        &__container-item-two {
+            margin-top: 10px;
+            margin-left: 9px;
+        }
+    
+        &__container-item-three {
+            margin-top: 17px;
+            margin-left: 7px;
+        }
+
+        &__link {
+            display: none;
+        }
+
+        &__open-modal-view {
+            display: flex;
+            justify-content: center;
+            margin-top: 39px;
+            margin-left: 2px;
+        }
     }
 }
