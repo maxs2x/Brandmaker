@@ -8,6 +8,7 @@ include ../../components/contacts/contacts.pug
 include ../../components/dropdown/dropdown.pug
 include ../../components/offer/offer.pug
 include ../../components/feedbackForm/feedbackForm.pug
+include ../../components/refinement-slider/refinement-slider.pug
 
 block variables 
   -
@@ -98,3 +99,8 @@ block content
         .first-screen__image
         .first-screen__feedback-form
           +feedbackForm()
+    section.inspection-selection.container
+      h2.inspection-selection__title
+      p.inspection-selection__header-text 
+      .inspection-selection__slider
+        +refinementSlider()
