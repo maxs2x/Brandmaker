@@ -1,4 +1,5 @@
 include _phone/phone.pug
+include _phone-height-s/phone-height-s.pug
 include _number/number.pug
 
 mixin text-field(options)
@@ -6,3 +7,5 @@ mixin text-field(options)
     +phone(options)
   if options.type === "number"
     +number(options)
+  if options.type === "phone-height-s"
+    +phone-height-s(options)

@@ -1,0 +1,30 @@
+.container-text-field {
+    position: relative;
+}
+
+.text-field.text-field_phone-height-s {
+    height: 56px;
+    width: 322px;
+    margin: 19px 0px 0px 0px;
+}
+
+.text-field:focus ~ .text-field__placeholder_phone-height-s{
+    opacity: 0; 
+    transition: 
+    opacity 0.8s ease;
+}
+
+.text-field__placeholder-symbol_phone-height-s {
+    color: #E4373D;
+}
+
+.text-field__placeholder_phone-height-s {
+    position: absolute;
+    left: 21px;
+    top: 40px;
+    font-family: $mainFont;
+    font-size: 13px;
+    color: $text1;
+    text-overflow: ellipsis;
+    z-index: 2;
+}

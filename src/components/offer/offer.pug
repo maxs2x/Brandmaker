@@ -1,5 +1,6 @@
 include ../benefits/benefits.pug
 include ../button/button.pug
+include ../modalView/modalView.pug
 
 mixin offer(options)
   - var options = options || {};
@@ -16,5 +17,7 @@ mixin offer(options)
       .offer__container-item-three
           +benefits(benefits[2])        
     a.offer__link(href="#second-screen") Подобрать профосмотр
-    a.offer__open-modal-view
+    +modalView()
+    a.offer__open-modal-view(href="#" data-hystmodal="#myModal")
       +button(['standard', 'Получить коммерческое предложение'])
+    

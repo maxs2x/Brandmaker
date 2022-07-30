@@ -1,18 +1,15 @@
-include ../text-field/text-field.pug
-include ../button/button.pug
+include ../../text-field/text-field.pug
+include ../../button/button.pug
 
-include _size-s/size-s.pug
-
-mixin feedbackForm(options)
+mixin feedbackForm_size-s(options)
   -
     var options = options || {};
-    var modalView = options.modalView || false;
     var action = options.action || "sendOnBackend";
     var method = options.method || "post";
     var textTopSectionOne = options.textTopSectionOne || "Оставьте заявку, и мы предоставим полный план профосмотра ";
     var textTopSectionTwo = options.textTopSectionTwo || "с расчетом итоговой стоимости, подходящий именно вашей организации";
     var textFieldId = options.textFieldId || "phone";
-    var textFieldType = options.textFieldType || "phone";
+    var textFieldType = options.textFieldType || "phone-height-s";
     var textField = {id: textFieldId, type: textFieldType};
     var buttonType = options.buttonType || "standard";
     var buttonText = options.buttonText || "Получить коммерческое предложение";
@@ -21,22 +18,16 @@ mixin feedbackForm(options)
     var linkOfferAgreement = options.linkOfferAgreement || "noLink";
     var textLinkOfferAgreement = options.textLinkOfferAgreement || "Политики защиты персональной информации";
 
-  if (modalView)
-    +feedbackForm_size-s(options)
-  else
-    svg.mask-feedbackForm
-      clipPath(id="shield" clipPathUnits="userSpaceOnUse")
-        path(d="M0 3.99999C0 1.79086 1.79086 0 4 0H185H366C368.209 0 370 1.79086 370 4V326.419C370 368.397 343.782 405.907 304.359 420.331L186.374 463.497C185.487 463.822 184.513 463.822 183.626 463.497L65.6408 420.331C26.218 405.907 0 368.397 0 326.419V3.99999Z" fill="white")
-
-    form.feedbackForm(action=action, method=method)
-      p.feedbackForm__offer-text= textTopSectionOne
+  form.feedbackForm.feedbackForm_size-s(action=action, method=method)
+    .feedbackForm__content-top_size-s
+      p.feedbackForm__offer-text.feedbackForm__offer-text_size-s= textTopSectionOne
         br
         | #{textTopSectionTwo}
-      .feedbackForm__text-field 
+      .feedbackForm__text-field.feedbackForm__text-field_size-s  
         +text-field(textField)
-      .feedbackForm__button 
+      .feedbackForm__button.feedbackForm__button_size-s 
         +button(button)
-      .feedbackForm__offer-agreement 
-        .feedbackForm__text-offer-agreement= textOfferAgreement
-        a.feedbackForm__link-offer-agreement(href=linkOfferAgreement)= textLinkOfferAgreement
-      
+    .feedbackForm__content-bottom_size-s
+      .feedbackForm__offer-agreement.feedbackForm__offer-agreement_size-s 
+        .feedbackForm__text-offer-agreement.feedbackForm__text-offer-agreement_size-s= textOfferAgreement
+        a.feedbackForm__link-offer-agreement.feedbackForm__link-offer-agreement_size-s(href=linkOfferAgreement)= textLinkOfferAgreement

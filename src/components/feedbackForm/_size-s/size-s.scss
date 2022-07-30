@@ -1,0 +1,28 @@
+.feedbackForm.feedbackForm_size-s {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 146px 16px 30px 19px;
+}
+
+.feedbackForm__offer-text.feedbackForm__offer-text_size-s {
+    margin: 0px;
+}
+
+.feedbackForm__text-field.feedbackForm__text-field_size-s {
+    width: 100%;
+    height: min-content;
+    margin: 11px auto 0px auto;
+    padding-right: 3px;
+}
+
+.feedbackForm__button.feedbackForm__button_size-s {
+    margin-top: 16px;
+}
+
+.feedbackForm__offer-agreement.feedbackForm__offer-agreement_size-s {
+    margin: 2px auto;
+}

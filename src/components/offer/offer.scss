@@ -1,4 +1,5 @@
 @import '../benefits/benefits.scss';
+@import '../modalView/modalView.scss';
 
 .offer {
     max-width: 635px;
@@ -56,7 +57,7 @@
         text-underline-offset: 1px;
     }
 
-    &__modal-view {
+    &__open-modal-view {
         display: none;
     }
 }
