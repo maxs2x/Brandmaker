@@ -78,3 +78,41 @@
     flex-flow: column nowrap;
     justify-content: center;
 }
+
+@media (max-width: 1000px) {
+    .first-screen__content {
+        height: auto;
+    }
+
+    .first-screen__image {
+      display: none;
+    }
+
+    .first-screen__offer {
+        align-items: flex-start;
+        width: 425px;
+        padding-left: 9px;
+        padding-bottom: 3px;
+        z-index: 1;
+    }
+
+    .first-screen__feedback-form {
+        justify-content: flex-start;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 850px) {
+    .first-screen__content {
+        justify-content: center;
+        min-height: 500px;
+    }
+
+    .first-screen__offer {
+        padding: 0px;
+    }
+
+    .first-screen__feedback-form {
+        display: none;
+    }
+}

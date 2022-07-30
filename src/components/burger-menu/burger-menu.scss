@@ -28,8 +28,9 @@
 
     &:checked ~ .burger-menu__navigation {
         display: flex;
-        position: fixed;
-        left: 0px;
+        position: absolute;
+        left: -317px;
+        top: 36px;
         z-index: 2;
     }
 
