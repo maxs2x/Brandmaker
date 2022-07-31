@@ -65,6 +65,7 @@ class QuestionsSlider extends ImageSlider {
         super(container);
         this.nextButtons = this.slider.querySelectorAll('.js-image-slider__next');
         this.prevButtons = this.slider.querySelectorAll('.js-image-slider__prev');
+        this.lastSlide = this.slider.querySelector('.js-last-slide');
         this.bindingNavigation();
     }
 
@@ -84,16 +85,27 @@ class QuestionsSlider extends ImageSlider {
         if (this.slideIndex === 0) {
             this.dots[0].className += " js-image-slider__dot_active";
         } else {
-
             for (let i = 0; i < countSlides; ++i) {
                 lastActiveDot += countSlides;
-                console.log(lastActiveDot);
                 if (lastActiveDot < this.dots.length) {
                     this.dots[lastActiveDot].className += " js-image-slider__dot_active";
-                    console.log(this.dots[lastActiveDot]);
                 }
             }
         }
+    }
+
+    plusSlides() {
+        if (this.slideIndex === (this.slides.length - 1)) {
+            this.goToLastSlide()
+        } else {
+            let n = this.slideIndex + 1;
+            this.showSlides(n);
+        }
+    }
+
+    goToLastSlide() {
+        this.slides[this.slideIndex].style.display = "none"; 
+        this.lastSlide.style.display = "flex";  
     }
 
     bindingDots() {

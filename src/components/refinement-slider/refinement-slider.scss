@@ -3,6 +3,7 @@
 @import '../button/button.scss';
 @import '../text-field/text-field.scss';
 @import '../checkbox/checkbox.scss';
+@import '../feedbackForm/feedbackForm.scss';
 
 .question-slider {
     width: 100%;
@@ -295,6 +296,30 @@
 .question-slider__navigation.question-slider__navigation_fourth-slide {
     margin-top: 64px;
 }
+
+.question-slider__last-slide {
+    padding-top: 55px;
+}
+
+.question-slider__header-last-slide {
+    max-width: 810px;
+    margin-top: 11px;
+    margin-bottom: 0px;
+    font-family: "Gotham Pro Medium";
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    color: $text1;
+}
+
+
+.js-last-slide {
+    display: none;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
     
     
 

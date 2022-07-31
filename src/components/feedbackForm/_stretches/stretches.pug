@@ -1,0 +1,26 @@
+include ../../text-field/text-field.pug
+include ../../button/button.pug
+
+mixin feedbackForm_stretches(options)
+  -
+    var options = options || {};
+    var textTopSectionOne = options.textTopSectionOne || "Оставьте заявку, и мы предоставим полный план профосмотра ";
+    var textTopSectionTwo = options.textTopSectionTwo || "с расчетом итоговой стоимости, подходящий именно вашей организации";
+    var textFieldId = options.textFieldId || "phone";
+    var textFieldType = options.textFieldType || "phone";
+    var textField = {id: textFieldId, type: textFieldType};
+    var buttonType = options.buttonType || "standard";
+    var buttonText = options.buttonText || "Получить коммерческое предложение";
+    var button = [buttonType, buttonText];
+    var textOfferAgreement = options.textOfferAgreement || "Передавая информацию сайту, вы принимаете условия";
+    var linkOfferAgreement = options.linkOfferAgreement || "noLink";
+    var textLinkOfferAgreement = options.textLinkOfferAgreement || "Политики защиты персональной информации";
+
+  .feedbackForm.feedbackForm_stretches
+    .feedbackForm__text-field.feedbackForm__text-field_stretches  
+      +text-field(textField)
+    .feedbackForm__button.feedbackForm__button_stretches
+      +button(button)
+    .feedbackForm__offer-agreement.feedbackForm__offer-agreement_stretches 
+      .feedbackForm__text-offer-agreement.feedbackForm__text-offer-agreement_stretches= textOfferAgreement
+      a.feedbackForm__link-offer-agreement.feedbackForm__link-offer-agreement_stretches(href=linkOfferAgreement)= textLinkOfferAgreement

@@ -1,6 +1,7 @@
 include ../button/button.pug
 include ../text-field/text-field.pug
 include ../checkbox/checkbox.pug
+include ../feedbackForm/feedbackForm.pug
 
 mixin refinementSlider(options)
   - var options = options || {};
@@ -102,20 +103,10 @@ mixin question-slider([img1, img2, img3, img4])
             +button(['arrow-small', 'Далее']) 
           .question-slider__prev.js-image-slider__prev 
             +button(['arrow-blue', 'Назад']) 
+    .question-slider__last-slide.js-last-slide
+      h3.question-slider__header-last-slide Введите номер телефона, и мы вышлем вам расчет стоимости профосмотра и коммерческое предложение
+      +feedbackForm({textTopSectionOne: " ", textTopSectionTwo: " ", stretches: true})
 
-mixin image-slider(...images)
-  .image-slider.js-image-slider
-    each image in images
-      .image-slider__photo-room.js-image-slider__photo-room.image-slider__fade
-        img.image-slider__image-room(src=require("../../images/slide" + image) alt="photo room")
-    a.image-slider__prev.js-image-slider__prev 
-      span.image-slider__arrow-left navigate_before
-    a.image-slider__next.js-image-slider__next
-      span.image-slider__arrow-right navigate_before
-    div.image-slider__dots
-      span(class="image-slider__dot js-image-slider__dot" data-index="1")
-      span(class="image-slider__dot js-image-slider__dot" data-index="2")
-      span(class="image-slider__dot js-image-slider__dot" data-index="3")
-      span(class="image-slider__dot js-image-slider__dot" data-index="4")
+
 
       

@@ -1,12 +1,15 @@
 include ../text-field/text-field.pug
 include ../button/button.pug
 
+include _stretches/stretches.pug
 include _size-s/size-s.pug
 
 mixin feedbackForm(options)
   -
     var options = options || {};
     var modalView = options.modalView || false;
+    var stretches = options.stretches || false;
+    var mask = options.mask || true;
     var action = options.action || "sendOnBackend";
     var method = options.method || "post";
     var textTopSectionOne = options.textTopSectionOne || "Оставьте заявку, и мы предоставим полный план профосмотра ";
@@ -23,10 +26,13 @@ mixin feedbackForm(options)
 
   if (modalView)
     +feedbackForm_size-s(options)
+  if (stretches)
+    +feedbackForm_stretches(options)
   else
-    svg.mask-feedbackForm
-      clipPath(id="shield" clipPathUnits="userSpaceOnUse")
-        path(d="M0 3.99999C0 1.79086 1.79086 0 4 0H185H366C368.209 0 370 1.79086 370 4V326.419C370 368.397 343.782 405.907 304.359 420.331L186.374 463.497C185.487 463.822 184.513 463.822 183.626 463.497L65.6408 420.331C26.218 405.907 0 368.397 0 326.419V3.99999Z" fill="white")
+    if mask
+      svg.mask-feedbackForm
+        clipPath(id="shield" clipPathUnits="userSpaceOnUse")
+          path(d="M0 3.99999C0 1.79086 1.79086 0 4 0H185H366C368.209 0 370 1.79086 370 4V326.419C370 368.397 343.782 405.907 304.359 420.331L186.374 463.497C185.487 463.822 184.513 463.822 183.626 463.497L65.6408 420.331C26.218 405.907 0 368.397 0 326.419V3.99999Z" fill="white")
 
     form.feedbackForm(action=action, method=method)
       p.feedbackForm__offer-text= textTopSectionOne

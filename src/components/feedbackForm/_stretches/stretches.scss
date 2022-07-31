@@ -1,0 +1,35 @@
+.feedbackForm.feedbackForm_stretches {
+    max-width: 422px;
+    padding: 45px 27px 0px 29px;
+    clip-path: none;
+}
+
+.feedbackForm__text-field.feedbackForm__text-field_stretches {
+    margin-top: 0px;
+    padding-right: 0px;
+}
+
+.feedbackForm__text-field_stretches .text-field__placeholder_phone{
+    left: 35px;
+    top: 22px;
+}
+
+.feedbackForm__button.feedbackForm__button_stretches {
+    margin-top: 22px;
+
+    & .button {
+        padding-left: 36px;
+        padding-right: 35px;
+        letter-spacing: 0.83px;
+    }
+}
+
+.feedbackForm__offer-agreement.feedbackForm__offer-agreement_stretches {
+    width: 94%;
+    margin: 48px auto 0px;
+    text-align: center;
+}
+
+.feedbackForm__text-offer-agreement.feedbackForm__text-offer-agreement_stretches {
+    line-height: 11px;
+}
