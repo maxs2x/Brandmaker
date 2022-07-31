@@ -26,7 +26,7 @@ mixin feedbackForm(options)
 
   if (modalView)
     +feedbackForm_size-s(options)
-  if (stretches)
+  else if (stretches)
     +feedbackForm_stretches(options)
   else
     if mask
