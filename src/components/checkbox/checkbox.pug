@@ -4,14 +4,15 @@ mixin checkbox(options)
     text = options.text || "Checkbox";
     condition = options.condition || "unchecked";
     name = options.name || "name";
+    value = options.value || "defValue";
 
   label.checkbox-container=text
     | 
     if condition === "checked"
-      input(type="checkbox" checked name=name)
+      input(type="checkbox" checked name=name value=value)
       
     else 
-      input(type="checkbox" name=name)
+      input(type="checkbox" name=name value=value)
     span.checkbox-container__checkmark
     span.checkbox-container__checkmark-inner
 

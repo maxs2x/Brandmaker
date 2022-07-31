@@ -80,6 +80,36 @@
     justify-content: center;
 }
 
+.inspection-selection {
+    text-align: center;
+    padding-top: 137px;
+}
+
+.inspection-selection__title {
+    margin-left: 2px;
+    font-family: 'Gotham Pro Medium';
+    font-size: 28px;
+    line-height: 35px;
+    text-align: center;
+    color: $text1;
+}
+
+.inspection-selection__header-text {
+    max-width: 800px;
+    margin: 39px auto 0px auto;
+    padding-right: 4px;
+    font-family: 'Gotham Pro Light';
+    font-size: 18px;
+    line-height: 33px;
+    text-align: center;
+    color: $text1;
+}
+
+.inspection-selection__slider {
+    padding-top: 52px;
+    padding-left: 15px;
+}
+
 @media (max-width: 1000px) {
     .first-screen__content {
         height: auto;

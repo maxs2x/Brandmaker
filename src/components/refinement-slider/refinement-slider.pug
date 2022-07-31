@@ -5,10 +5,9 @@ include ../feedbackForm/feedbackForm.pug
 
 mixin refinementSlider(options)
   - var options = options || {};
-  - var images = options.images || []
 
   .refinement-slider
-    +question-slider("1.jpg", "2.jpg", "3.jpg", "4.jpg")
+    +question-slider(options)
 
 mixin dots-block()
   .question-slider__step.js-image-slider__dot(data-index="1") Шаг 1
@@ -16,8 +15,12 @@ mixin dots-block()
   .question-slider__step-three.js-image-slider__dot(data-index="3") Шаг 3
   .question-slider__step.js-image-slider__dot(data-index="4") Шаг 4
 
-mixin question-slider([img1, img2, img3, img4])
-  .question-slider.js-image-slider
+mixin question-slider(options)
+  - var options = options || {};
+  - var action = options.action || "/sliderForm";
+  - var method = options.method || "POST";
+
+  form.question-slider.js-image-slider(action=action, method=method)
     .question-slider__question-box.js-image-slider__photo-room.image-slider__fade 
       .question-slider__image.question-slider__image_first-slide
         img.image-slider__image-room_first-slide(src=require("../../images/slide1.jpg") alt="photo room")
@@ -36,29 +39,29 @@ mixin question-slider([img1, img2, img3, img4])
     .question-slider__question-box.js-image-slider__photo-room.image-slider__fade 
       .question-slider__image
         img.image-slider__image-room(src=require("../../images/slide2.jpg") alt="photo room")
-      .question-slider__question
-        .question-slider__step-number
+      .question-slider__question.question-slider__question_second-slide
+        .question-slider__step-number.question-slider__step-number_second-slide
             +dots-block()
-        .question-slider__question-body
-          .question-slider__question-border-number
-            p.question-slider__question-number 2
-          p.question-slider__question-text Укажите вид необходимой услуги 
+        .question-slider__question-body.question-slider__question-body_second-slide
+          .question-slider__question-border-number.question-slider__question-border-number_second-slide
+            p.question-slider__question-number.question-slider__question-number_second-slide 2
+          p.question-slider__question-text.question-slider__question-text_second-slide Укажите вид необходимой услуги 
             <br>
             | (Можно выбрать несколько вариантов)
-        .question-slider__checkbox-box
-          +checkbox({name: "type of service", text: "Предварительный/периодический медицинский осмотр"})
-          +checkbox({name: "type of service", text: "Выездной медицинский осмотр (профосмотр)"})
-          +checkbox({name: "type of service", text: "Личные медицинские книжки (ЛМК)"})
-          +checkbox({name: "type of service", text: "Психиатрическое освидетельствование"})
-          +checkbox({name: "type of service", text: "Предрейсовые/послерейсовые профосмотры"})
-          +checkbox({name: "type of service", text: "Предсменные/послесменные профосмотры"})
-          +checkbox({name: "type of service", text: "Организация здравпункта на предприятии"})
-          +checkbox({name: "type of service", text: "Диспансеризация"})
-          +checkbox({name: "type of service", text: "Вакцинация"})
-          +checkbox({name: "type of service", text: "Помощь в организации аттестации рабочих мест (СОУТ)"})
-          +checkbox({name: "type of service", text: "Тендерный отдел"})
-          +checkbox({name: "type of service", text: "Я не знаю, нужна помощь в подборе"})
-        .question-slider__navigation 
+        .question-slider__checkbox-box_second-slide
+          +checkbox({name: "type of service", value: "", text: "Предварительный/периодический медицинский осмотр"})
+          +checkbox({name: "type of service", value: "", text: "Выездной медицинский осмотр (профосмотр)"})
+          +checkbox({name: "type of service", value: "", text: "Личные медицинские книжки (ЛМК)"})
+          +checkbox({name: "type of service", value: "", text: "Психиатрическое освидетельствование"})
+          +checkbox({name: "type of service", value: "", text: "Предрейсовые/послерейсовые профосмотры"})
+          +checkbox({name: "type of service", value: "", text: "Предсменные/послесменные профосмотры"})
+          +checkbox({name: "type of service", value: "", text: "Организация здравпункта на предприятии"})
+          +checkbox({name: "type of service", value: "", text: "Диспансеризация"})
+          +checkbox({name: "type of service", value: "", text: "Вакцинация"})
+          +checkbox({name: "type of service", value: "", text: "Помощь в организации аттестации рабочих мест (СОУТ)"})
+          +checkbox({name: "type of service", value: "", text: "Тендерный отдел"})
+          +checkbox({name: "type of service", value: "", text: "Я не знаю, нужна помощь в подборе"})
+        .question-slider__navigation.question-slider__navigation_second-slide 
           .question-slider__next.js-image-slider__next
             +button(['arrow-small', 'Далее']) 
           .question-slider__prev.js-image-slider__prev 
@@ -95,9 +98,9 @@ mixin question-slider([img1, img2, img3, img4])
             br
             | требуется выездная бригада?
         .question-slider__answer-box.question-slider__answer-box_fourth-slide
-          +radio-button({text: "В медцентре", name: "onPlace"})
+          +radio-button({text: "В медцентре", name: "onPlace", checked: "checked", value: "in"})
           .question-slider__divider-radio-button
-          +radio-button({text: "Требуется выездная бригада", name: "onPlace"})
+          +radio-button({text: "Требуется выездная бригада", name: "onPlace", value: "out"})
         .question-slider__navigation.question-slider__navigation_fourth-slide
           .question-slider__next.question-slider__next_fourth-slide.js-image-slider__next
             +button(['arrow-small', 'Далее']) 
