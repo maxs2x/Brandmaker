@@ -33,46 +33,6 @@ mixin question-slider([img1, img2, img3, img4])
           .question-slider__next.question-slider__next_first-slide.js-image-slider__next
             +button(['arrow-small', 'Далее']) 
     .question-slider__question-box.js-image-slider__photo-room.image-slider__fade 
-      .question-slider__image.question-slider__image_fourth-slide
-        img.image-slider__image-room_first-slide(src=require("../../images/slide4.jpg") alt="photo room")
-      .question-slider__question.question-slider__question_fourth-slide
-        .question-slider__step-number.question-slider__step-number_fourth-slide
-          +dots-block()
-        .question-slider__question-body.question-slider__question-body_fourth-slide
-          .question-slider__question-border-number.question-slider__question-border-number_fourth-slide
-            p.question-slider__question-number.question-slider__question-number_fourth-slide 4
-          p.question-slider__question-text.question-slider__question-text_fourth-slide Вы планируете пройти профосмотр в одном из наших медцентров или
-            br
-            | требуется выездная бригада?
-        .question-slider__answer-box.question-slider__answer-box_fourth-slide
-          +radio-button({text: "В медцентре", name: "onPlace"})
-          .question-slider__divider-radio-button
-          +radio-button({text: "Требуется выездная бригада", name: "onPlace"})
-        .question-slider__navigation.question-slider__navigation_fourth-slide
-          .question-slider__next.question-slider__next_fourth-slide.js-image-slider__next
-            +button(['arrow-small', 'Далее']) 
-          .question-slider__prev.js-image-slider__prev 
-            +button(['arrow-blue', 'Назад']) 
-    .question-slider__question-box.js-image-slider__photo-room.image-slider__fade 
-      .question-slider__image.question-slider__image_first-slide
-        img.image-slider__image-room_first-slide(src=require("../../images/slide3.jpg") alt="photo room")
-      .question-slider__question.question-slider__question_third-slide
-        .question-slider__step-number.question-slider__step-number_third-slide
-          +dots-block()
-        .question-slider__question-body.question-slider__question-body_third-slide
-          .question-slider__question-border-number.question-slider__question-border-number_third-slide
-            p.question-slider__question-number.question-slider__question-number_third-slide 3
-          p.question-slider__question-text.question-slider__question-text_third-slide Укажите количество сотрудников, которым нужно
-            br
-            | провести профосмотр.
-        .question-slider__answer-box.question-slider__answer-box_third-slide
-          +text-field({type: "number", id: "numberEmployees", placeholder: "Введите число"})
-        .question-slider__navigation.question-slider__navigation_third-slide
-          .question-slider__next.question-slider__next_third-slide.js-image-slider__next
-            +button(['arrow-small', 'Далее']) 
-          .question-slider__prev.js-image-slider__prev 
-            +button(['arrow-blue', 'Назад']) 
-    .question-slider__question-box.js-image-slider__photo-room.image-slider__fade 
       .question-slider__image
         img.image-slider__image-room(src=require("../../images/slide2.jpg") alt="photo room")
       .question-slider__question
@@ -103,39 +63,45 @@ mixin question-slider([img1, img2, img3, img4])
           .question-slider__prev.js-image-slider__prev 
             +button(['arrow-blue', 'Назад']) 
     .question-slider__question-box.js-image-slider__photo-room.image-slider__fade 
-      .question-slider__image
-        img.image-slider__image-room(src=require("../../images/slide3.jpg") alt="photo room")
-      .question-slider__question
-        .question-slider__step-number
+      .question-slider__image.question-slider__image_first-slide
+        img.image-slider__image-room_first-slide(src=require("../../images/slide3.jpg") alt="photo room")
+      .question-slider__question.question-slider__question_third-slide
+        .question-slider__step-number.question-slider__step-number_third-slide
           +dots-block()
-        .question-slider__question-body
-          .question-slider__question-border-number
-            p.question-slider__question-number 3
-          p.question-slider__question-text Укажите количество сотрудников, которым нужно провести профосмотр.
-        .question-slider__answer-box
-          p OTVET 324234
-        .question-slider__navigation 
-          .question-slider__next.js-image-slider__next
-              +button(['arrow-small', 'Далее']) 
-          .question-slider__prev.js-image-slider__prev 
-            +button(['arrow-blue', 'Назад']) 
-    .question-slider__question-box.js-image-slider__photo-room.image-slider__fade 
-      .question-slider__image
-        img.image-slider__image-room(src=require("../../images/slide4.jpg") alt="photo room")      
-      .question-slider__question
-        .question-slider__step-number
-          +dots-block()
-        .question-slider__question-body
-          .question-slider__question-border-number
-            p.question-slider__question-number 4
-          .question-slider__question-text Вы планируете пройти профосмотр в одном из наших медцентров или требуется выездная бригада?
-        .question-slider__answer-box
-          p OTVET afasdf ad afa fdf
-        .question-slider__navigation 
-          .question-slider__next.js-image-slider__next
+        .question-slider__question-body.question-slider__question-body_third-slide
+          .question-slider__question-border-number.question-slider__question-border-number_third-slide
+            p.question-slider__question-number.question-slider__question-number_third-slide 3
+          p.question-slider__question-text.question-slider__question-text_third-slide Укажите количество сотрудников, которым нужно
+            br
+            | провести профосмотр.
+        .question-slider__answer-box.question-slider__answer-box_third-slide
+          +text-field({type: "number", id: "numberEmployees", placeholder: "Введите число"})
+        .question-slider__navigation.question-slider__navigation_third-slide
+          .question-slider__next.question-slider__next_third-slide.js-image-slider__next
             +button(['arrow-small', 'Далее']) 
           .question-slider__prev.js-image-slider__prev 
             +button(['arrow-blue', 'Назад'])
+    .question-slider__question-box.js-image-slider__photo-room.image-slider__fade 
+      .question-slider__image.question-slider__image_fourth-slide
+        img.image-slider__image-room_first-slide(src=require("../../images/slide4.jpg") alt="photo room")
+      .question-slider__question.question-slider__question_fourth-slide
+        .question-slider__step-number.question-slider__step-number_fourth-slide
+          +dots-block()
+        .question-slider__question-body.question-slider__question-body_fourth-slide
+          .question-slider__question-border-number.question-slider__question-border-number_fourth-slide
+            p.question-slider__question-number.question-slider__question-number_fourth-slide 4
+          p.question-slider__question-text.question-slider__question-text_fourth-slide Вы планируете пройти профосмотр в одном из наших медцентров или
+            br
+            | требуется выездная бригада?
+        .question-slider__answer-box.question-slider__answer-box_fourth-slide
+          +radio-button({text: "В медцентре", name: "onPlace"})
+          .question-slider__divider-radio-button
+          +radio-button({text: "Требуется выездная бригада", name: "onPlace"})
+        .question-slider__navigation.question-slider__navigation_fourth-slide
+          .question-slider__next.question-slider__next_fourth-slide.js-image-slider__next
+            +button(['arrow-small', 'Далее']) 
+          .question-slider__prev.js-image-slider__prev 
+            +button(['arrow-blue', 'Назад']) 
 
 mixin image-slider(...images)
   .image-slider.js-image-slider

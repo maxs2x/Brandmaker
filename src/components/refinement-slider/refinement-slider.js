@@ -3,7 +3,7 @@ class ImageSlider {
         this.slider = container;
         this.slides = this.slider.querySelectorAll('.js-image-slider__photo-room');
         this.dots = this.slider.querySelectorAll('.js-image-slider__dot');
-        this.nextButton = this.slider.querySelector('.js-image-slider__next')
+        this.nextButton = this.slider.querySelector('.js-image-slider__next');
         this.prevButton = this.slider.querySelector('.js-image-slider__prev');
         this.nextButton.onclick = this.plusSlides.bind(this);
         this.prevButton.onclick = this.currentSlide.bind(this);
@@ -29,6 +29,10 @@ class ImageSlider {
         }
 
         this.slides[this.slideIndex].style.display = "flex";  
+        this.toggleActiveDots();
+    }
+
+    toggleActiveDots() {
         this.dots[this.slideIndex].className += " js-image-slider__dot_active";
     }
 
@@ -56,6 +60,47 @@ class ImageSlider {
 
 let allImageSliders = document.querySelectorAll('.js-image-slider');
 
+class QuestionsSlider extends ImageSlider {
+    constructor(container) {
+        super(container);
+        this.nextButtons = this.slider.querySelectorAll('.js-image-slider__next');
+        this.prevButtons = this.slider.querySelectorAll('.js-image-slider__prev');
+        this.bindingNavigation();
+    }
+
+    bindingNavigation() {
+        for (button of this.nextButtons) {
+            button.onclick = this.plusSlides.bind(this);
+        }
+        for (button of this.prevButtons) {
+            button.onclick = this.currentSlide.bind(this);
+        }
+    }
+
+    toggleActiveDots() {
+        let countSlides = this.slides.length;
+        let lastActiveDot = this.slideIndex;
+
+        if (this.slideIndex === 0) {
+            this.dots[0].className += " js-image-slider__dot_active";
+        } else {
+
+            for (let i = 0; i < countSlides; ++i) {
+                lastActiveDot += countSlides;
+                console.log(lastActiveDot);
+                if (lastActiveDot < this.dots.length) {
+                    this.dots[lastActiveDot].className += " js-image-slider__dot_active";
+                    console.log(this.dots[lastActiveDot]);
+                }
+            }
+        }
+    }
+
+    bindingDots() {
+        let comment = "Выключаем функцию переключения слайдов по точкам";
+    }
+}
+
 for (let slider of allImageSliders) {
-    new ImageSlider(slider);
+    new QuestionsSlider(slider);
 }
