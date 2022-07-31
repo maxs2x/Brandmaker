@@ -3,6 +3,7 @@
 @import './_phone/phone.scss';
 @import './_phone-height-s/phone-height-s.scss';
 @import './_number/number.scss';
+@import './_text/text.scss';
 
 .container-text-field input {
   text-indent: 25%;
@@ -32,7 +33,6 @@
   font-size: 13px;
   color: $text1;
   text-overflow: ellipsis;
-  font-family: 'Montserrat';
 }
 
 .text-field:focus::placeholder {

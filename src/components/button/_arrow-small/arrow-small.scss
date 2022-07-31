@@ -2,18 +2,18 @@ button.button_arrow-small {
     position: relative;
     height: 40px;
     padding-left: 29px;
-    padding-right: 69.5px;
-    font-family: 'Gotham Pro';
+    padding-right: 69px;
+    font-family: "Gotham Pro";
     font-size: 14px;
-    letter-spacing: 0.7px;
-    line-height: 15px;
+    letter-spacing: 0.8px;
+    line-height: 19px;
 
     &::before {
         content: '';
         display: block;
         position: absolute;
         width: 24px;
-        top: 20px;
+        top: 19px;
         right: 35px;
         border-top: solid 1.8px;
         border-color: #FFFFFF;
@@ -25,7 +25,7 @@ button.button_arrow-small {
         height: 3px;
         width: 3px;
         position: absolute;
-        top: 18.5px;
+        top: 17.5px;
         right: 35.5px;
         border-top: solid 1.5px;
         border-right: solid 1.5px;

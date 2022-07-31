@@ -3,9 +3,15 @@ include _phone-height-s/phone-height-s.pug
 include _number/number.pug
 
 mixin text-field(options)
+  - var options = options || {};
+  - var id = options.id || "defaultId";
+  - var placeholder = options.placeholder || "default placeholder";
+
   if options.type === "phone"
     +phone(options)
   if options.type === "number"
     +number(options)
   if options.type === "phone-height-s"
     +phone-height-s(options)
+  if options.type === "text"
+    textarea.text-field_text(id=id type="text" placeholder=placeholder)
