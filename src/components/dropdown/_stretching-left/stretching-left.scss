@@ -1,0 +1,9 @@
+.list-of-options.list-of-options_stretching-left {
+    width: max-content;
+    right: 0px;
+    padding: 0px 15px 15px 0px;
+}
+
+.list-of-options__item.list-of-options__item_stretching-left.js-list-of-options__item {
+    justify-content: flex-end;
+}

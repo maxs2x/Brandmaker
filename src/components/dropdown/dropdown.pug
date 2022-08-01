@@ -4,6 +4,7 @@ mixin dropdown(options)
   - var options = options || {text_placeholder : "Dropdown", content : ["спальни", "кровати", "ванные комнаты"]};
   - var textPlaceholder = (options.text_placeholder) ? options.text_placeholder : "Dropdown";
   - var dropdownNavLink = (options.dropdownNavLink) ? options.dropdownNavLink : false;
+  - var stretchingLeft = (options.stretchingLeft) ? options.stretchingLeft : false;
   - var titleRow = (options.content) ? options.content : ["спальни", "кровати", "ванные комнаты"];
 
   if dropdownNavLink 
@@ -21,11 +22,13 @@ mixin dropdown(options)
         ul.list-of-options.list-of-options_fixed-width 
           each val in options.dropdownItems
             +fixed-width(val)
+      else if stretchingLeft
+        ul.list-of-options.list-of-options_stretching-left
+          each val in titleRow
+            li.list-of-options__item.list-of-options__item_stretching-left.js-list-of-options__item
+              p.list-of-options__title-item.list-of-options__title-item_stretching-left= val 
       else
         ul.list-of-options
           each val in titleRow
             li.list-of-options__item.js-list-of-options__item
-              p.list-of-options__title-item= val 
-         
-       
-      
+              p.list-of-options__title-item= stretchingLeft
