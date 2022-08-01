@@ -62,16 +62,16 @@
     box-sizing: border-box;
     top: 47px;
     max-width: 100%;
-    min-width: 362px;
+    min-width: 360px;
     width: 100%;
     background: white;
     display: none;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 42px 20px 0px 21px;
+    padding: 42px 20px 0px 22px;
     transition: right .4s;
-    border-bottom-left-radius: 5rem;
+    border-radius: 10px;
   }
 
   &__contact {
