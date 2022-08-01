@@ -9,12 +9,12 @@
 
 Для запуска проекта необходимо:
 
-    скопировать репозиторий
-        git clone https://github.com/maxs2x/Brandmaker.git
-    установить все необходимые пакеты
-        npm install
-    запустить проект
-        в режиме разработки
-            npm start
-        собрать страницы сайта из исходников
-            npm run build
+скопировать репозиторий
+    git clone https://github.com/maxs2x/Brandmaker.git
+установить все необходимые пакеты
+    npm install
+запустить проект:
+в режиме разработки
+    npm start
+собрать страницы сайта из исходников
+    npm run build
