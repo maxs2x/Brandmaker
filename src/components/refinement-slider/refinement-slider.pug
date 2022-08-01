@@ -20,10 +20,10 @@ mixin question-slider(options)
   - var action = options.action || "/sliderForm";
   - var method = options.method || "POST";
 
-  form.question-slider.js-image-slider(action=action, method=method)
+  form.question-slider.js-image-slider(id="question-slider", action=action, method=method)
     .question-slider__question-box.js-image-slider__photo-room.image-slider__fade 
       .question-slider__image.question-slider__image_first-slide
-        img.image-slider__image-room_first-slide(src=require("../../images/slide1.jpg") alt="photo room")
+        img.image-slider__image-room(src=require("../../images/slide1.jpg") alt="photo room")
       .question-slider__question.question-slider__question_first-slide
         .question-slider__step-number.question-slider__step-number_first-slide
           +dots-block()
@@ -37,7 +37,7 @@ mixin question-slider(options)
           .question-slider__next.question-slider__next_first-slide.js-image-slider__next
             +button(['arrow-small', 'Далее']) 
     .question-slider__question-box.js-image-slider__photo-room.image-slider__fade 
-      .question-slider__image
+      .question-slider__image.question-slider__image_second-slide
         img.image-slider__image-room(src=require("../../images/slide2.jpg") alt="photo room")
       .question-slider__question.question-slider__question_second-slide
         .question-slider__step-number.question-slider__step-number_second-slide
@@ -49,26 +49,28 @@ mixin question-slider(options)
             <br>
             | (Можно выбрать несколько вариантов)
         .question-slider__checkbox-box_second-slide
-          +checkbox({name: "type of service", value: "", text: "Предварительный/периодический медицинский осмотр"})
-          +checkbox({name: "type of service", value: "", text: "Выездной медицинский осмотр (профосмотр)"})
-          +checkbox({name: "type of service", value: "", text: "Личные медицинские книжки (ЛМК)"})
-          +checkbox({name: "type of service", value: "", text: "Психиатрическое освидетельствование"})
-          +checkbox({name: "type of service", value: "", text: "Предрейсовые/послерейсовые профосмотры"})
-          +checkbox({name: "type of service", value: "", text: "Предсменные/послесменные профосмотры"})
-          +checkbox({name: "type of service", value: "", text: "Организация здравпункта на предприятии"})
-          +checkbox({name: "type of service", value: "", text: "Диспансеризация"})
-          +checkbox({name: "type of service", value: "", text: "Вакцинация"})
-          +checkbox({name: "type of service", value: "", text: "Помощь в организации аттестации рабочих мест (СОУТ)"})
-          +checkbox({name: "type of service", value: "", text: "Тендерный отдел"})
-          +checkbox({name: "type of service", value: "", text: "Я не знаю, нужна помощь в подборе"})
+          .question-slider__checkbox-box-left
+            +checkbox({name: "type of service", value: "", text: "Предварительный/периодический медицинский осмотр"})
+            +checkbox({name: "type of service", value: "", text: "Выездной медицинский осмотр (профосмотр)"})
+            +checkbox({name: "type of service", value: "", text: "Личные медицинские книжки (ЛМК)"})
+            +checkbox({name: "type of service", value: "", text: "Психиатрическое освидетельствование"})
+            +checkbox({name: "type of service", value: "", text: "Предрейсовые/послерейсовые профосмотры"})
+            +checkbox({name: "type of service", value: "", text: "Предсменные/послесменные профосмотры"})
+          .question-slider__checkbox-box-right
+            +checkbox({name: "type of service", value: "", text: "Организация здравпункта на предприятии"})
+            +checkbox({name: "type of service", value: "", text: "Диспансеризация"})
+            +checkbox({name: "type of service", value: "", text: "Вакцинация"})
+            +checkbox({name: "type of service", value: "", text: "Помощь в организации аттестации рабочих мест (СОУТ)"})
+            +checkbox({name: "type of service", value: "", text: "Тендерный отдел"})
+            +checkbox({name: "type of service", value: "", text: "Я не знаю, нужна помощь в подборе"})
         .question-slider__navigation.question-slider__navigation_second-slide 
           .question-slider__next.js-image-slider__next
             +button(['arrow-small', 'Далее']) 
           .question-slider__prev.js-image-slider__prev 
             +button(['arrow-blue', 'Назад']) 
     .question-slider__question-box.js-image-slider__photo-room.image-slider__fade 
-      .question-slider__image.question-slider__image_first-slide
-        img.image-slider__image-room_first-slide(src=require("../../images/slide3.jpg") alt="photo room")
+      .question-slider__image.question-slider__image_third-slide
+        img.image-slider__image-room(src=require("../../images/slide3.jpg") alt="photo room")
       .question-slider__question.question-slider__question_third-slide
         .question-slider__step-number.question-slider__step-number_third-slide
           +dots-block()
@@ -87,7 +89,7 @@ mixin question-slider(options)
             +button(['arrow-blue', 'Назад'])
     .question-slider__question-box.js-image-slider__photo-room.image-slider__fade 
       .question-slider__image.question-slider__image_fourth-slide
-        img.image-slider__image-room_first-slide(src=require("../../images/slide4.jpg") alt="photo room")
+        img.image-slider__image-room(src=require("../../images/slide4.jpg") alt="photo room")
       .question-slider__question.question-slider__question_fourth-slide
         .question-slider__step-number.question-slider__step-number_fourth-slide
           +dots-block()

@@ -147,4 +147,27 @@
     .first-screen__feedback-form {
         display: none;
     }
+
+    .inspection-selection {
+        padding-top: 40px;
+
+        &__title {
+            font-size: 21px;
+            line-height: 28px;
+            color: $text1;
+            letter-spacing: 0.1px;
+        }
+
+        &__header-text {
+            font-size: 15px;
+            line-height: 20px;
+            color: $text1;
+        }
+
+        &__slider {
+            padding-top: 15px;
+            padding-left: 0px;
+        }
+    }
+
 }
