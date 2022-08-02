@@ -4,8 +4,17 @@
 @import './_size-s/size-s.scss';
 @import './_stretches/stretches.scss';
 
+.mask {
+    margin: 0px;
+}
+
+figcaption {
+    display: none;
+    opacity: 0;
+}
+
 .mask-feedbackForm {
-    height: 19px;
+    height: 16px;
 }
 
 .feedbackForm {
