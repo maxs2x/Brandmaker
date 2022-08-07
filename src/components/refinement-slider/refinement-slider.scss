@@ -324,7 +324,7 @@
         }
 
         &__step-number {
-            padding: 0px;
+            padding: 0px 0px 5px 0px;
 
         }
 
@@ -342,6 +342,10 @@
 
         &__checkbox-box_second-slide {
             flex-flow: row wrap;
+
+            & .checkbox-container {
+                margin-bottom: 10px;
+            }
         }
 
         &__answer-box.question-slider__answer-box_third-slide {
@@ -362,7 +366,7 @@
     }
 
     .js-image-slider__dot_active {
-        padding: 1px 5px;;
+        padding: 3px 5px 5px;
         border: solid 1px;
         border-color: $blue;
         border-radius: 4px; 

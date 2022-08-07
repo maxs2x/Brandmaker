@@ -9,6 +9,7 @@ include ../../components/dropdown/dropdown.pug
 include ../../components/offer/offer.pug
 include ../../components/feedbackForm/feedbackForm.pug
 include ../../components/refinement-slider/refinement-slider.pug
+include ../../components/text-slider/text-slider.pug
 
 block variables 
   -
@@ -105,3 +106,9 @@ block content
       p.inspection-selection__header-text Ответьте на 4 вопроса, и мы подберем подходящий профосмотр, рассчитаем стоимость его проведения и вышлем коммерческое предложение
       .inspection-selection__slider
         +refinementSlider()
+    section.services.container
+      h2.services__header С 2010 года мы специализируемся на оказании следующих услуг:
+      .services__slider
+        +text-slider()
+        
+      

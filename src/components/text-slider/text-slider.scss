@@ -1,0 +1,112 @@
+.text-slider {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    font-family: $mainFont;
+    font-size: 16px;
+    
+    &__header {
+        width: 100%;
+        margin-top: 288px;
+        margin-bottom: 55px;
+        padding-left: 2px;
+        font-family: "Gotham Pro Medium";
+        font-size: 28px;
+        line-height: 40px;
+        text-align: center;
+        color: $text1
+    }
+
+    &__link-mask {
+        position: absolute;
+        width: min-content;
+        margin: 0px 0px 0px 0px;
+    }
+
+    &__links {
+        display: flex;
+        flex-flow: column nowrap;
+        max-width: 648px;
+        width: 100%;
+        line-height: 56px;
+        padding-left: 16px;
+    }
+
+    &__link {
+        position: relative;
+        width: 100%;
+        margin-bottom: 4px;
+        padding-left: 18px;
+        color: $text1;
+        text-decoration: none;
+        border-bottom: solid 1px;
+        border-color: #E8E8E8;
+
+        &:hover {
+            color: $blue;
+            text-shadow: 0px 4px 4px rgba(0, 159, 227, 0.28);
+        }
+
+        &_active {
+            clip-path: url(#service-link-active);
+            border: none;
+        }
+    }
+
+    &__offer {
+        max-width: 398px;
+        width: 100%;
+        margin: 3px 20px 0px 0px;
+        padding: 59px 20px 84px 43px;
+        font-family: $mainFont;
+        font-size: 15px;
+        line-height: 23px;
+        border: solid 2px;
+        border-color: $blue;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.08);
+    }
+
+    &__text-offer {
+
+    }
+
+    &__title-list {
+        margin-top: 32px;
+        margin-bottom: 16px;
+    }
+
+    &__list {
+        margin: 0px;
+        padding-left: 19px;
+        list-style-type: none;
+    }
+
+    &__list-item {
+        position: relative;
+        max-width: 356px;
+        width: 100%;
+        margin-bottom: 8px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 9px;
+            height: 1px;
+            top: 11px;
+            left: -18px;
+            border-top: solid 1px;
+            border-color: $blue;
+        }
+    }
+
+    &__text-after-list {
+        margin: 37px 0px 43px 13px;
+    }
+
+    &__button-offer {
+
+    }
+}

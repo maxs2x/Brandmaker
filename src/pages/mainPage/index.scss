@@ -9,6 +9,7 @@
 @import '../../components/offer/offer.scss';
 @import '../../components/feedbackForm/feedbackForm.scss';
 @import '../../components/refinement-slider/refinement-slider.scss';
+@import '../../components/text-slider/text-slider.scss';
 
 .container {
     width: 100%;
@@ -110,6 +111,21 @@
     padding-left: 15px;
 }
 
+.services__header {
+    width: 100%;
+    margin: 287px auto 56px; 
+    padding-left: 1px;
+    font-family: "Gotham Pro Medium";
+    font-size: 28px;
+    line-height: 40px;
+    text-align: center;
+    color: $text1
+}
+
+.services__slider {
+    width: 100%;
+}
+
 @media (max-width: 1000px) {
     .container {
         box-sizing: border-box;
@@ -138,6 +154,8 @@
         margin-top: 20px;
     }
 }
+
+
 
 @media (max-width: 850px) {
     .container {
@@ -178,5 +196,6 @@
             padding-left: 0px;
         }
     }
+    
 
 }
