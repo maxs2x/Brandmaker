@@ -1,0 +1,39 @@
+include ../button/button.pug
+
+mixin dropdown-link(options)
+  -
+    options = options || {};
+    href = options.href || "noLink";
+    textLink = options.textLink || "Default text dropdown link";
+    descriptionHeaderText = options.descriptionHeaderText || "Default text";
+    descriptionTitleList = options.descriptionTitleList || "Title default";
+    descriptionListItem = options.descriptionListItem || ["Lore ipsum"];
+    descriptionAfterList = options.descriptionAfterList || "After default";
+    button = options.button || ["arrow-big", "Рассчитать стоимость"];
+
+  .dropdown-link
+    input(class="tab-switch" type="radio" name="css-tabs" id="tab-1" checked)
+    label(for="tab-1" class="tab-label") Description
+    .tab-content
+      .dropdown-link-description
+        p.dropdown-link-description__text-offer=descriptionHeaderText
+        h4.dropdown-link-description__title-list=descriptionTitleList
+        ul.dropdown-link-description__list
+          for item in descriptionListItem
+            li.dropdown-link-description__list-item=item
+        p.dropdown-link-description__text-after-list Предоставляем персонального менеджера
+        .dropdown-link-description__button-offer 
+            +button(button)
+  .dropdown-link
+    input(class="tab-switch" type="radio" name="css-tabs" id="tab-2")
+    label(for="tab-2" class="tab-label") Description
+    .tab-content
+      .dropdown-link-description
+        p.dropdown-link-description__text-offer=descriptionHeaderText
+        h4.dropdown-link-description__title-list=descriptionTitleList
+        ul.dropdown-link-description__list
+          for item in descriptionListItem
+            li.dropdown-link-description__list-item=item
+        p.dropdown-link-description__text-after-list AAAAAAAAAAAAAAAAПредоставляем персонального менеджера
+        .dropdown-link-description__button-offer 
+            +button(button)
