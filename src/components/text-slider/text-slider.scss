@@ -1,14 +1,9 @@
 @import '../dropdown-link/dropdown-link.scss';
 
 .text-slider {
-    //display: flex;
-    //flex-flow: row wrap;
-    //justify-content: space-between;
-    
-    max-width: 50rem;
     width: 100%;
     margin: 0 auto;
-
+    padding: 0px 0px 1px 14px;
     font-family: $mainFont;
     font-size: 16px;
     
@@ -39,101 +34,24 @@
         padding-left: 16px;
     }
 
-    &__link {
-        position: relative;
-        width: 100%;
-        margin-bottom: 4px;
-        padding-left: 18px;
-        color: $text1;
-        text-decoration: none;
-        border-bottom: solid 1px;
-        border-color: #E8E8E8;
 
-        &:hover {
-            color: $blue;
-            text-shadow: 0px 4px 4px rgba(0, 159, 227, 0.28);
-        }
 
-        &_active {
-            clip-path: url(#service-link-active);
-            border: none;
-        }
-    }
-
-    &__description {
-        max-width: 398px;
-        width: 100%;
-        margin: 3px 20px 0px 0px;
-        padding: 59px 20px 84px 43px;
-        font-family: $mainFont;
-        font-size: 15px;
-        line-height: 23px;
-        border: solid 2px;
-        border-color: $blue;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
-        border-bottom-left-radius: 5px;
-        box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.08);
-    }
-
-    &__text-offer {
-
-    }
-
-    &__title-list {
-        margin-top: 32px;
-        margin-bottom: 16px;
-    }
-
-    &__list {
-        margin: 0px;
-        padding-left: 19px;
-        list-style-type: none;
-    }
-
-    &__list-item {
-        position: relative;
-        max-width: 356px;
-        width: 100%;
-        margin-bottom: 8px;
-
+    &__tabs {
+        position: relative; 
+        margin: 0;
+        padding-top: 8px;
+        display: flex;
+        flex-flow: column nowrap;
+    
         &::before {
-            position: absolute;
             content: "";
-            width: 9px;
-            height: 1px;
-            top: 11px;
-            left: -18px;
-            border-top: solid 1px;
-            border-color: $blue;
+            display: table;
         }
-    }
-
-    &__text-after-list {
-        margin: 37px 0px 43px 13px;
-    }
-
-    &__button-offer {
-
-    }
-}
-
-.text-slider__tabs {
-    position: relative; 
-    margin: 3rem 0;
-    background: #1abc9c;
-    height: 14.75rem;
-    display: flex;
-    flex-flow: column nowrap;
-
-    &::before {
-        content: "";
-        display: table;
-    }
-
-    &::after {
-        content: "";
-        display: table;
-        clear: both;
+    
+        &::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
     }
 }

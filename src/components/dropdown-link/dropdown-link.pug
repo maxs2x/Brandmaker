@@ -2,38 +2,36 @@ include ../button/button.pug
 
 mixin dropdown-link(options)
   -
-    options = options || {};
-    href = options.href || "noLink";
-    textLink = options.textLink || "Default text dropdown link";
-    descriptionHeaderText = options.descriptionHeaderText || "Default text";
-    descriptionTitleList = options.descriptionTitleList || "Title default";
-    descriptionListItem = options.descriptionListItem || ["Lore ipsum"];
-    descriptionAfterList = options.descriptionAfterList || "After default";
-    button = options.button || ["arrow-big", "Рассчитать стоимость"];
+    var options = options || {};
+    var href = options.href || "noLink";
+    var textLink = options.textLink || "Default text dropdown link";
+    var descriptionHeaderText = options.descriptionHeaderText || "Default text";
+    var descriptionTitleList = options.descriptionTitleList || "Title default";
+    var descriptionListItem = options.descriptionListItem || ["Lore ipsum"];
+    var descriptionAfterList = options.descriptionAfterList || "After default";
+    var button = options.button || ["arrow-big", "Рассчитать стоимость"];
+    var tabId = options.tabId || "noID";
+    var checkeD = options.checked || "";
 
   .dropdown-link
-    input(class="tab-switch" type="radio" name="css-tabs" id="tab-1" checked)
-    label(for="tab-1" class="tab-label") Description
-    .tab-content
-      .dropdown-link-description
-        p.dropdown-link-description__text-offer=descriptionHeaderText
-        h4.dropdown-link-description__title-list=descriptionTitleList
-        ul.dropdown-link-description__list
+    if checkeD
+      input(checked class="dropdown-link__tab-switch" type="radio" name="css-tabs" id=tabId)
+    else 
+      input(class="dropdown-link__tab-switch" type="radio" name="css-tabs" id=tabId)
+    label(for=tabId class="dropdown-link__tab-label")
+      p=textLink
+      figure.text-slider__link-mask 
+        svg.text-slider__link-mask-image(width="685" height="60" viewBox="0 0 685 60" fill="none")
+          path(id="service-link-active" d="M0 4C0 1.79086 1.79086 0 4 0H666.822C668.329 0 669.708 0.84686 670.39 2.1908L684.051 29.1289C684.645 30.3006 684.626 31.6894 684 32.8444L670.414 57.9063C669.714 59.1964 668.365 60 666.897 60H3.99998C1.79084 60 0 58.2091 0 56V4Z" fill="#ECEEF2")
+        figcaption.text-slider__link-mask-description  Выбранный элемент
+    .dropdown-link__tab-content
+      .dropdown-link__description
+        p.dropdown-link__text-offer=descriptionHeaderText
+        h4.dropdown-link__title-list=descriptionTitleList
+        ul.dropdown-link__list
           for item in descriptionListItem
-            li.dropdown-link-description__list-item=item
-        p.dropdown-link-description__text-after-list Предоставляем персонального менеджера
-        .dropdown-link-description__button-offer 
+            li.dropdown-link__list-item=item
+        p.dropdown-link__text-after-list Предоставляем персонального менеджера
+        .dropdown-link__button-offer 
             +button(button)
-  .dropdown-link
-    input(class="tab-switch" type="radio" name="css-tabs" id="tab-2")
-    label(for="tab-2" class="tab-label") Description
-    .tab-content
-      .dropdown-link-description
-        p.dropdown-link-description__text-offer=descriptionHeaderText
-        h4.dropdown-link-description__title-list=descriptionTitleList
-        ul.dropdown-link-description__list
-          for item in descriptionListItem
-            li.dropdown-link-description__list-item=item
-        p.dropdown-link-description__text-after-list AAAAAAAAAAAAAAAAПредоставляем персонального менеджера
-        .dropdown-link-description__button-offer 
-            +button(button)
+    
