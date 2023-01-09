@@ -1,0 +1,20 @@
+include ../benefits/benefits.pug
+
+mixin video-screen(options)
+  - var options = options || {};
+  - var benefitsOne = options.benefitsOne || {image : "video-bf1.jpg",alt : "heart",title : " ",description : "с 2010 года заботимся о здоровье сотрудников",};
+  - var benefitsTwo = options.benefitsTwo || {image : "video-bf2.jpg",alt : "medical device",title : " ",description : "от 200 специалистов в штате",};
+  - var benefitsThree = options.benefitsThree || {image : "video-bf3.jpg",alt : "three humans",title : " ",description : "более 4000 организаций в списке постоянных клиентов",};
+
+  .video-screen 
+    figure.video-screen__container
+      // poster=require("../../images/VideoPoster.jpg"
+      video.video-screen__video(id="my-player" poster=require("../../images/VideoPoster.jpg"))
+        source(src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4") 
+      .video-screen__controls
+        button(class="controls__button toggleButton" title="Toggle Play") ►
+        p.video-screen__text-play-button Смотреть видео о центре
+    .video-screen__benefits 
+      +benefits(benefitsOne)
+      +benefits(benefitsTwo)
+      +benefits(benefitsThree) 

@@ -6,6 +6,9 @@
 
    [hystmodal](https://www.npmjs.com/package/hystmodal) ver.0.5.1 плагин для быстрого создания модальных окон
 
+   [video.js](https://videojs.com/)
+   кастомизация видео плеера
+
 
 Для запуска проекта необходимо:
 

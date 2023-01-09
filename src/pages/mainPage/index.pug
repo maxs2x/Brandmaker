@@ -10,6 +10,7 @@ include ../../components/offer/offer.pug
 include ../../components/feedbackForm/feedbackForm.pug
 include ../../components/refinement-slider/refinement-slider.pug
 include ../../components/text-slider/text-slider.pug
+include ../../components/video-screen/video-screen.pug
 
 block variables 
   -
@@ -110,5 +111,8 @@ block content
       h2.services__header С 2010 года мы специализируемся на оказании следующих услуг:
       .services__slider
         +text-slider()
+    section.video.container 
+      h2.video__header Ознакомтесь с нащей видео-презентацией
+      +video-screen()
         
       

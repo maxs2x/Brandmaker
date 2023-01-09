@@ -1,0 +1,45 @@
+@import '../benefits/benefits.scss';
+
+.video-screen {
+    display: flex;
+    flex-flow: row nowrap;
+
+    &__container {
+        max-width: 770px;
+        width: 100%;
+        position: relative;
+    }
+
+    &__video {
+        max-width: 770px;
+        width: 100%;
+    }
+
+    &__controls{
+        display: flex;
+        position: absolute;
+        top: 50%;
+        margin-top: -0.625em; 
+        width: 100%;
+        flex-wrap: wrap;
+        transform: translateY(0);
+
+        & button {
+            background: none;
+            border: 0;
+            margin: auto;
+            color: #009FE3;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+
+
+
+    }
+
+    &__benefits {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+}
