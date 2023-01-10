@@ -15,6 +15,10 @@ mixin benefits(options)
   -   classMainBlock = "benefit benefit_list";
   -   classTextBlock = "benefit__text benefit__text_list";
   - };
+  - if (!modifier) {
+  -   classMainBlock = "benefit";
+  -   classTextBlock = "benefit__text";
+  - };
 
   div(class=classMainBlock)
     img.benefit__image(src=require("../../images/" + options.image), alt=alt)

@@ -127,6 +127,17 @@
     width: 100%;
 }
 
+.video__header {
+    margin-top: 127px;
+    margin-bottom: 52px;
+    text-align: center;
+    font-family: "Gotham Pro Medium";
+    font-size: 28px;
+    line-height: 40px;
+    text-align: center;
+    color: $text;
+}
+
 @media (max-width: 1000px) {
     .container {
         box-sizing: border-box;

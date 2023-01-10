@@ -1,5 +1,5 @@
-const video = document.querySelector(".video-screen__video");
-const toggleButton = document.querySelector(".toggleButton");
+const video = document.querySelector(".js-video-screen__video");
+const toggleButton = document.querySelector(".js-video-screen__controls");
 
 function togglePlay() {
     if (video.paused || video.ended) {
@@ -10,7 +10,7 @@ function togglePlay() {
 }
 
 function updateToggleButton() {
-    toggleButton.innerHTML = video.paused ? "►" : "❚ ❚";
+    video.paused ? toggleButton.style.display = '' : toggleButton.style.display = 'none';
 }
 
 toggleButton.addEventListener("click", togglePlay);

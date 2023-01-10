@@ -5,16 +5,24 @@ mixin video-screen(options)
   - var benefitsOne = options.benefitsOne || {image : "video-bf1.jpg",alt : "heart",title : " ",description : "с 2010 года заботимся о здоровье сотрудников",};
   - var benefitsTwo = options.benefitsTwo || {image : "video-bf2.jpg",alt : "medical device",title : " ",description : "от 200 специалистов в штате",};
   - var benefitsThree = options.benefitsThree || {image : "video-bf3.jpg",alt : "three humans",title : " ",description : "более 4000 организаций в списке постоянных клиентов",};
+  - var videoPoster = options.videoPoster || "VideoPoster.jpg";
+  - var videoSRC = options.videoSRC || "//vjs.zencdn.net/v/oceans.mp4";
 
   .video-screen 
     figure.video-screen__container
-      // poster=require("../../images/VideoPoster.jpg"
-      video.video-screen__video(id="my-player" poster=require("../../images/VideoPoster.jpg"))
-        source(src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4") 
-      .video-screen__controls
-        button(class="controls__button toggleButton" title="Toggle Play") ►
+      video.video-screen__video.js-video-screen__video(height="435px" width="770px"  id="my-player" poster=require("../../images/" + videoPoster))
+        source(src=videoSRC type="video/mp4") 
+      .video-screen__controls.js-video-screen__controls
+        .video-screen__play-button
+          button(class="controls__button" title="Toggle Play") 
+          svg
+            clipPath(id="playButton" clipPathUnits="userSpaceOnUse")  
+              path(d="M12.3655 6.93847L3.79227 0.776477C2.46914 -0.174526 0.625 0.771063 0.625 2.40051V14.7245C0.625 16.3539 2.46914 17.2995 3.79227 16.3485L12.3655 10.1865C13.4758 9.3885 13.4758 7.7365 12.3655 6.93847Z" fill="#009FE3")
         p.video-screen__text-play-button Смотреть видео о центре
     .video-screen__benefits 
-      +benefits(benefitsOne)
-      +benefits(benefitsTwo)
-      +benefits(benefitsThree) 
+      .video-screen__benefit-heart
+        +benefits(benefitsOne)
+      .video-screen__benefit-workers
+        +benefits(benefitsTwo)
+      .video-screen__benefit-organizations
+        +benefits(benefitsThree) 

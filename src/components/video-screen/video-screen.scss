@@ -8,6 +8,7 @@
         max-width: 770px;
         width: 100%;
         position: relative;
+        margin-right: 52px;
     }
 
     &__video {
@@ -19,27 +20,71 @@
         display: flex;
         position: absolute;
         top: 50%;
-        margin-top: -0.625em; 
+        margin-top: -2.4em; 
         width: 100%;
-        flex-wrap: wrap;
-        transform: translateY(0);
+        flex-flow: column nowrap;
+        align-items: center;
+    }
 
-        & button {
-            background: none;
-            border: 0;
+    &__play-button {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: white;
+
+        & button{
+            background-color: $blue;
+            width: 0px;
+            height: 18px;
             margin: auto;
-            color: #009FE3;
             font-size: 20px;
             cursor: pointer;
+            border: none;
+            clip-path: url(#playButton);
         }
 
+        & svg {
+            position: absolute;
+        }
+    }
 
-
-
+    &__text-play-button {
+        max-width: 121px;
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-family: $robotoFont;
+        font-size: $font-size;
+        margin-top: 21px;
+        letter-spacing: -0.4px;
     }
 
     &__benefits {
         display: flex;
         flex-flow: column nowrap;
+        justify-content: space-between;
+        padding: 103px 0px 147px 0px;
+    }
+
+    &__benefit-heart {
+        padding-left: 2px;
+    }
+
+    &__benefit-workers {
+        margin-left: 6px;
+    }
+
+    &__benefit-organizations {
+        margin-left: 6px;
+    }
+}
+
+@media(max-width: 1050px) {
+    .video-screen__container {
+        margin-right: 20px;
+        margin-left: 10px;
     }
 }
